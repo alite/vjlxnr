@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3506608248,
+	"modificationdate" : 3506622311,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -56,32 +56,17 @@
 ,
 			"teppich.mp4" : 			{
 				"kind" : "moviefile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Desktop/VJLX&R",
-					"projectrelativepath" : "../../../../Desktop/VJLX&R"
-				}
-
+				"local" : 1
 			}
 ,
 			"schlitze.mp4" : 			{
 				"kind" : "moviefile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Desktop/VJLX&R",
-					"projectrelativepath" : "../../../../Desktop/VJLX&R"
-				}
-
+				"local" : 1
 			}
 ,
 			"alufolie.mp4" : 			{
 				"kind" : "moviefile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Desktop/VJLX&R",
-					"projectrelativepath" : "../../../../Desktop/VJLX&R"
-				}
-
+				"local" : 1
 			}
 
 		}
