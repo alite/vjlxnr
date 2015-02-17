@@ -8,7 +8,7 @@ var enable = 0;
 var render_context = jsarguments[1];
 
 var texture = new JitterObject("jit.gl.texture", render_context);
-//texture.dim = [/*1920, 1080*/800, 600];
+texture.dim = [1920, 1080/*800, 600*/];
 // texture.colormode = "uyvy";
 texture.erase_color = [];
 var sketch = new JitterObject("jit.gl.sketch", render_context);
@@ -35,6 +35,7 @@ draw.local = 1;
 
 draw[0] = undefined/*function() { return; }*/;
 
+// Bunte Kreise
 draw[1] = function(v) {
     // var value = v<0. ? 0. : v>1. ? 1. : v;
     var value = v;
@@ -55,30 +56,35 @@ draw[1] = function(v) {
     outlet(0, "jit_gl_texture", texture.name);
 }
 
+// Konzentrische Kreise
 draw[2] = function(v) {
-    var col = 1;
-    var count = v * 100;
-    sketch.reset();
-    // with (sketch) {
-    //     moveto(0, 0, 0);
-    //     glcolor(1, 1, 1);
-    //     circle(1.);
-    //     moveto(0, 0, .1);
-    //     glcolor(0, 0, 0);
-    //     circle(.5);
-    // }
-    for (var i=count; i>0; --i) {
-        var x = snrandval(v)/100;
-        var y = snrandval(v)/100;
-        var r = v*count/i;
-        with (sketch) {
-            // reset();
-            moveto(x, y, i/10);
-            glcolor(col, col, col);
-            circle(r);
+    var count = 100 * v;
+    var len = v>0 ? 10/v : 10;
+    with (sketch) {
+        reset();
+        glcolor(1, 1, 1);
+        for (var i=1; i<=count; ++i) {
+            moveto((Math.random()-.5)/len, (Math.random()-.5)/len);
+            framecircle(i/count*v);
         }
-        col = (col === 1) ? 0 : 1;
-        post("color", col, " radius ", r, "\n");
+        glend();
+    }
+    outlet(0, "jit_gl_texture", texture.name);
+}
+
+// Blitze
+draw[3] = function(v) {
+    var linecount = 1000 * v;
+    var len = v > 0 ? 10/v : 10;
+    with (sketch) {
+        reset();
+        glcolor(1, 1, 1);
+        glbegin("line_loop");
+        moveto((Math.random()-.5)/len, (Math.random()-.5)/len);
+        for (var i=0; i<linecount; ++i) {
+            line((Math.random()-.5)/len, (Math.random()-.5)/len);
+        }
+        glend();
     }
     outlet(0, "jit_gl_texture", texture.name);
 }

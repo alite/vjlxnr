@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3506622311,
+	"modificationdate" : 3506976305,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -16,12 +16,12 @@
 				"toplevel" : 1
 			}
 ,
-			"al.line.maxpat" : 			{
+			"al.fullscreen.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"al.randscalpos.maxpat" : 			{
+			"al.rendermetro.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -31,12 +31,12 @@
 				"local" : 1
 			}
 ,
-			"al.fullscreen.maxpat" : 			{
+			"al.randscalpos.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"al.rendermetro.maxpat" : 			{
+			"al.line.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -67,6 +67,19 @@
 			"alufolie.mp4" : 			{
 				"kind" : "moviefile",
 				"local" : 1
+			}
+
+		}
+,
+		"code" : 		{
+			"vjlxnr.js" : 			{
+				"kind" : "javascript",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/code",
+					"projectrelativepath" : "./code"
+				}
+
 			}
 
 		}
