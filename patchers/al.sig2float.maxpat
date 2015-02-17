@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1081.0, 142.0, 338.0, 589.0 ],
+		"rect" : [ 1482.0, 110.0, 338.0, 589.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 75.0, 285.0, 49.0, 22.0 ],
+					"style" : "",
+					"text" : "qlim 33"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "Threshold rel.",
 					"id" : "obj-10",
 					"maxclass" : "inlet",
@@ -56,7 +69,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 75.0, 285.0, 30.0, 30.0 ],
+					"patching_rect" : [ 75.0, 330.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -172,7 +185,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 50.0, 330.0, 224.0, 22.0 ],
+					"patching_rect" : [ 50.0, 375.0, 224.0, 22.0 ],
 					"style" : "",
 					"text" : "snapshot~ 4n"
 				}
@@ -211,7 +224,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 365.0, 30.0, 30.0 ],
+					"patching_rect" : [ 50.0, 410.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -246,7 +259,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 0 ]
@@ -255,11 +268,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-71", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 84.5, 275.0, 59.5, 275.0 ],
-					"source" : [ "obj-20", 0 ]
+					"midpoints" : [ 84.5, 321.0, 59.5, 321.0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
