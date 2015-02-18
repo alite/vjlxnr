@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 315.0, 79.0, 990.0, 941.0 ],
+		"rect" : [ 521.0, 79.0, 990.0, 965.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -245,9 +245,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 360.0, 534.5, 501.0, 35.0 ],
+					"patching_rect" : [ 360.0, 534.5, 504.0, 35.0 ],
 					"style" : "",
-					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 2 @layer 3 @depth_enable 0 @blend_enable 1 @blend multiply @enable 1"
+					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 2 @layer 3 @depth_enable 0 @blend_enable 1 @blend multiply @enable 0"
 				}
 
 			}
@@ -768,9 +768,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 360.0, 346.0, 500.0, 35.0 ],
+					"patching_rect" : [ 360.0, 346.0, 504.0, 35.0 ],
 					"style" : "",
-					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 2 @layer 2 @depth_enable 0 @blend_enable 0 @blend multiply"
+					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 2 @layer 2 @depth_enable 0 @blend_enable 1 @blend multiply @enable 0"
 				}
 
 			}
@@ -794,9 +794,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 360.0, 166.0, 502.0, 22.0 ],
+					"patching_rect" : [ 360.0, 166.0, 609.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 2 @layer 1 @blend_enable 1 @depth_enable 0"
+					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 2 @layer 1 @blend_enable 1 @depth_enable 0 @blend alphablend"
 				}
 
 			}
