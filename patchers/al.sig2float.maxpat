@@ -45,7 +45,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 75.0, 285.0, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "qlim 33"
+					"text" : "qlim 50"
 				}
 
 			}

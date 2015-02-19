@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3506976305,
+	"modificationdate" : 3507147377,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -74,12 +74,7 @@
 		"code" : 		{
 			"vjlxnr.js" : 			{
 				"kind" : "javascript",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/code",
-					"projectrelativepath" : "./code"
-				}
-
+				"local" : 1
 			}
 
 		}

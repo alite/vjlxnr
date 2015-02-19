@@ -1,28 +1,42 @@
 post("blubber.js");
 inlets = 1;
-outlets = 1;
+outlets = 2;
 
-this.autowatch = 1;
-
-var enable = 0;
 var render_context = jsarguments[1];
+var mode = 0;
 
 var texture = new JitterObject("jit.gl.texture", render_context);
-texture.dim = [1920, 1080/*800, 600*/];
+texture.dim = [1920, 1080];
 // texture.colormode = "uyvy";
-texture.erase_color = [];
+texture.erase_color = [0., 0., 0., .0];
 var sketch = new JitterObject("jit.gl.sketch", render_context);
 sketch.capture = texture.name;
+sketch.enable = 0;
 
-function msg_int(i) {
-    enable = i;
+function pattern(m) {
+	mode = (m<0) ? 0 : (m>=draw.length) ? draw.length-1 : m;
+	// post("Mode set to ", mode, "\n");
+}
+
+function enable(e) {
+	sketch.enable = (e===0) ? 0 : 1;
+	// post("Sketch ", (e===0) ? "disabled" : "enabled", "\n");
+}
+
+function dim(x, y) {
+	texture.dim = [x, y];
+	// post("Texture.dim set to ", x, ", ", y, "\n");
+}
+
+function dumpout() {
+	post("Sketch.enable = ", sketch.enable, "\n");
+	post("Pattern = ", mode, "\n");
+	post("Texture.dim", texture.dim, "\n");
 }
 
 function msg_float(v) {
-    if (typeof draw[enable] === "function") {
-        // post("draw[", enable, "]: \n");
-        draw[enable](v);
-    }
+	// v = (v<0.)? 0. : (v>1.) ? 1. : v;
+	draw[mode](v);
 }
 
 function bang() {
@@ -33,7 +47,8 @@ function bang() {
 var draw = [];
 draw.local = 1;
 
-draw[0] = undefined/*function() { return; }*/;
+// Disabled
+draw[0] = undefined;
 
 // Bunte Kreise
 draw[1] = function(v) {
