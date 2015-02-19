@@ -36,6 +36,7 @@ function dumpout() {
 
 function msg_float(v) {
 	// v = (v<0.)? 0. : (v>1.) ? 1. : v;
+	if (mode === 0) { return; };
 	draw[mode](v);
 }
 
