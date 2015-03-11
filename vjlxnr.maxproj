@@ -2,8 +2,8 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3507147377,
-	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
+	"modificationdate" : 3508955515,
+	"viewrect" : [ 25.0, 70.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -44,28 +44,98 @@
 		}
 ,
 		"media" : 		{
-			"platte.mp4" : 			{
-				"kind" : "moviefile",
+			"color_00.jpg" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"putz.mp4" : 			{
-				"kind" : "moviefile",
+			"mask_08.jpg" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"teppich.mp4" : 			{
-				"kind" : "moviefile",
+			"mask_07.jpg" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"schlitze.mp4" : 			{
-				"kind" : "moviefile",
+			"mask_06.jpg" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"alufolie.mp4" : 			{
-				"kind" : "moviefile",
+			"mask_05.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_04.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_03.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_02.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_01.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_00.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_09.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_08.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_07.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_06.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_05.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_04.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_03.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_02.jpg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"color_01.jpg" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 
