@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 753.0, 79.0, 315.0, 366.0 ],
+		"rect" : [ 514.0, 79.0, 888.0, 834.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,47 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-96",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 44.0, 362.0, 197.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 45.0, 287.0, 238.0, 20.0 ],
+					"style" : "",
+					"text" : "Klicken zum Bilderordner wechseln"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-94",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 15.0, 360.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 12.0, 285.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 51.0, 390.0, 92.0, 22.0 ],
+					"style" : "",
+					"text" : "opendialog fold"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Sniglet",
 					"fontsize" : 30.0,
@@ -120,6 +161,7 @@
 				"box" : 				{
 					"id" : "obj-87",
 					"maxclass" : "jit.pwindow",
+					"name" : "u573000282",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -145,7 +187,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-35",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.jpg", ",", "color_01.jpg", ",", "color_02.jpg", ",", "color_03.jpg", ",", "color_04.jpg", ",", "color_05.jpg", ",", "color_06.jpg", ",", "color_07.jpg", ",", "color_08.jpg", ",", "color_09.jpg", ",", "mask_00.jpg", ",", "mask_01.jpg", ",", "mask_02.jpg", ",", "mask_03.jpg", ",", "mask_04.jpg", ",", "mask_05.jpg", ",", "mask_06.jpg", ",", "mask_07.jpg", ",", "mask_08.jpg" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -186,7 +228,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.jpg", ",", "color_01.jpg", ",", "color_02.jpg", ",", "color_03.jpg", ",", "color_04.jpg", ",", "color_05.jpg", ",", "color_06.jpg", ",", "color_07.jpg", ",", "color_08.jpg", ",", "color_09.jpg", ",", "mask_00.jpg", ",", "mask_01.jpg", ",", "mask_02.jpg", ",", "mask_03.jpg", ",", "mask_04.jpg", ",", "mask_05.jpg", ",", "mask_06.jpg", ",", "mask_07.jpg", ",", "mask_08.jpg" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -393,6 +435,7 @@
 				"box" : 				{
 					"id" : "obj-55",
 					"maxclass" : "jit.pwindow",
+					"name" : "u691000417",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -542,36 +585,6 @@
 					"patching_rect" : [ 99.0, 525.0, 41.0, 22.0 ],
 					"style" : "",
 					"text" : "folder"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-77",
-					"maxclass" : "dropfile",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 51.0, 360.0, 167.0, 45.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 285.0, 268.0, 45.0 ],
-					"types" : [ "fold" ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-78",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 57.0, 366.0, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 74.0, 291.0, 150.0, 33.0 ],
-					"style" : "",
-					"text" : "Bilderordner hierher ziehen"
 				}
 
 			}
@@ -1422,6 +1435,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1849,15 +1871,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-69", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-77", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1959,6 +1972,26 @@
 					"hidden" : 0,
 					"midpoints" : [ 166.5, 513.0, 108.5, 513.0 ],
 					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 24.5, 585.0, 60.5, 585.0 ],
+					"source" : [ "obj-94", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 24.5, 387.0, 60.5, 387.0 ],
+					"source" : [ "obj-94", 0 ]
 				}
 
 			}
