@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3508955515,
+	"modificationdate" : 3509367563,
 	"viewrect" : [ 25.0, 70.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -136,14 +136,6 @@
 ,
 			"color_01.jpg" : 			{
 				"kind" : "imagefile",
-				"local" : 1
-			}
-
-		}
-,
-		"code" : 		{
-			"vjlxnr.js" : 			{
-				"kind" : "javascript",
 				"local" : 1
 			}
 
