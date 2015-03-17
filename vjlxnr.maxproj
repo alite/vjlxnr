@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3509367563,
+	"modificationdate" : 3509403768,
 	"viewrect" : [ 25.0, 70.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -37,6 +37,11 @@
 			}
 ,
 			"al.line.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"al.foldercontents.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
