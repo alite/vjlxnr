@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 636.0, 79.0, 817.0, 687.0 ],
+		"rect" : [ 287.0, 105.0, 817.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -323,9 +323,9 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "", "", "", "int", "" ],
-					"patching_rect" : [ 75.0, 165.0, 199.0, 22.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "int" ],
+					"patching_rect" : [ 75.0, 165.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "al.foldercontents"
 				}
@@ -337,7 +337,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 4 ]
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
@@ -419,7 +419,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 203.5, 150.0, 285.0, 150.0, 285.0, 195.0, 240.0, 195.0, 240.0, 319.0, 345.0, 319.0 ],
+					"midpoints" : [ 203.5, 150.0, 240.0, 150.0, 240.0, 195.0, 240.0, 195.0, 240.0, 319.0, 345.0, 319.0 ],
 					"source" : [ "obj-21", 2 ]
 				}
 
