@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 384.0, 98.0, 1069.0, 759.0 ],
+		"rect" : [ 688.0, 199.0, 1069.0, 759.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -254,7 +254,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 120.0, 150.0, 123.0, 22.0 ],
+					"patching_rect" : [ 120.0, 135.0, 123.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess types PNG"
 				}

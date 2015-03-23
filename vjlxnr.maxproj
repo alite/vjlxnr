@@ -2,8 +2,8 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3509403768,
-	"viewrect" : [ 25.0, 70.0, 300.0, 811.0 ],
+	"modificationdate" : 3510493341,
+	"viewrect" : [ 1.0, 45.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -14,6 +14,16 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"al.folder2matrixset.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/_DeletedItems/patchers",
+					"projectrelativepath" : "./_DeletedItems/patchers"
+				}
+
 			}
 ,
 			"al.fullscreen.maxpat" : 			{
@@ -49,97 +59,112 @@
 		}
 ,
 		"media" : 		{
-			"color_00.jpg" : 			{
+			"color_00.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_08.jpg" : 			{
+			"color_01.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_07.jpg" : 			{
+			"color_02.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_06.jpg" : 			{
+			"color_03.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_05.jpg" : 			{
+			"color_04.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_04.jpg" : 			{
+			"color_05.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_03.jpg" : 			{
+			"color_06.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_02.jpg" : 			{
+			"color_07.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_01.jpg" : 			{
+			"color_08.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"mask_00.jpg" : 			{
+			"color_09.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_09.jpg" : 			{
+			"color_10.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_08.jpg" : 			{
+			"color_11.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_07.jpg" : 			{
+			"color_12.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_06.jpg" : 			{
+			"mask_00.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_05.jpg" : 			{
+			"mask_01.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_04.jpg" : 			{
+			"mask_02.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_03.jpg" : 			{
+			"mask_03.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_02.jpg" : 			{
+			"mask_04.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"color_01.jpg" : 			{
+			"mask_05.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_06.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_07.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"mask_08.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
