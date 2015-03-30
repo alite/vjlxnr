@@ -2,8 +2,8 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3510493341,
-	"viewrect" : [ 1.0, 45.0, 300.0, 811.0 ],
+	"modificationdate" : 3510572871,
+	"viewrect" : [ 3.0, 51.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -14,16 +14,6 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
-			}
-,
-			"al.folder2matrixset.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/_DeletedItems/patchers",
-					"projectrelativepath" : "./_DeletedItems/patchers"
-				}
-
 			}
 ,
 			"al.fullscreen.maxpat" : 			{
@@ -46,13 +36,23 @@
 				"local" : 1
 			}
 ,
-			"al.line.maxpat" : 			{
+			"al.folder2matrixset.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"al.foldercontents.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"al.line.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"m4l.vjlxnr.amxd" : 			{
+				"kind" : "maxforlive",
 				"local" : 1
 			}
 
