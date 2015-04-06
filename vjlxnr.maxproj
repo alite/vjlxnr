@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3510572871,
+	"modificationdate" : 3511191120,
 	"viewrect" : [ 3.0, 51.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -166,6 +166,14 @@
 ,
 			"mask_08.png" : 			{
 				"kind" : "imagefile",
+				"local" : 1
+			}
+
+		}
+,
+		"code" : 		{
+			"al.matrixgate.js" : 			{
+				"kind" : "javascript",
 				"local" : 1
 			}
 

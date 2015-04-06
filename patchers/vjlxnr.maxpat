@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 493.0, 79.0, 352.0, 279.0 ],
+		"rect" : [ 493.0, 79.0, 1357.0, 967.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -57,9 +57,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 578.0, 68.0, 22.0 ],
+					"patching_rect" : [ 15.0, 578.0, 71.0, 22.0 ],
 					"style" : "",
-					"text" : "prepend fg"
+					"text" : "prepend bg"
 				}
 
 			}
@@ -70,9 +70,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 126.333252, 578.0, 71.0, 22.0 ],
+					"patching_rect" : [ 126.333252, 578.0, 68.0, 22.0 ],
 					"style" : "",
-					"text" : "prepend bg"
+					"text" : "prepend fg"
 				}
 
 			}
@@ -107,8 +107,8 @@
 					"id" : "obj-105",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
+					"numoutlets" : 4,
+					"outlettype" : [ "jit_matrix", "jit_matrix", "", "int" ],
 					"patching_rect" : [ 15.0, 638.0, 290.0, 22.0 ],
 					"style" : "",
 					"text" : "al.folder2matrixset"
@@ -175,9 +175,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 315.0, 698.0, 113.0, 22.0 ],
+					"patching_rect" : [ 315.0, 698.0, 109.0, 22.0 ],
 					"style" : "",
-					"text" : "s vjlxnr.background"
+					"text" : "s vjlxnr.foreground"
 				}
 
 			}
@@ -187,9 +187,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 105.0, 698.0, 109.0, 22.0 ],
+					"patching_rect" : [ 105.0, 698.0, 113.0, 22.0 ],
 					"style" : "",
-					"text" : "s vjlxnr.foreground"
+					"text" : "s vjlxnr.background"
 				}
 
 			}
@@ -210,7 +210,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-35",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.png", ",", "color_01.png", ",", "mask_07.png", ",", "mask_08.png" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -226,7 +226,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.png", ",", "color_01.png", ",", "mask_07.png", ",", "mask_08.png" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -936,7 +936,7 @@
 					"destination" : [ "obj-87", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 160.0, 676.0, 234.5, 676.0 ],
+					"midpoints" : [ 114.833333, 676.0, 234.5, 676.0 ],
 					"source" : [ "obj-105", 1 ]
 				}
 
@@ -956,7 +956,7 @@
 					"destination" : [ "obj-91", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 160.0, 676.0, 324.5, 676.0 ],
+					"midpoints" : [ 114.833333, 676.0, 324.5, 676.0 ],
 					"source" : [ "obj-105", 1 ]
 				}
 
@@ -1397,6 +1397,13 @@
 				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.matrixgate.js",
+				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],
