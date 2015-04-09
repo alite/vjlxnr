@@ -203,14 +203,14 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 225.0, 698.0, 80.0, 60.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 12.0, 120.0, 133.0, 75.0 ]
+					"presentation_rect" : [ 149.0, 120.0, 133.0, 75.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-35",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "color_13.png", ",", "color_14.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -226,7 +226,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "color_13.png", ",", "color_14.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -249,7 +249,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 15.0, 698.0, 80.0, 60.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 120.0, 133.0, 75.0 ]
+					"presentation_rect" : [ 12.0, 120.0, 133.0, 75.0 ]
 				}
 
 			}
