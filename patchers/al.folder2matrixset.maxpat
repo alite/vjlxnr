@@ -270,7 +270,7 @@
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 364.0, 475.0, 264.0, 35.0 ],
 					"style" : "",
-					"text" : "jit.matrixset @dim 1920 1080 @matrixcount 64 @interp 1"
+					"text" : "jit.matrixset @dim 1920 1080 @matrixcount 32 @interp 1"
 				}
 
 			}
@@ -679,23 +679,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "al.foldercontents.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "al.matrixgate.js",
-				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
