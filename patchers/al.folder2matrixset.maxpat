@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 97.5, 570.0, 228.5, 22.0 ],
+					"patching_rect" : [ 97.5, 570.0, 259.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "al.matrixgate",
 						"parameter_enable" : 0
@@ -87,7 +87,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 570.0, 426.0, 30.0, 30.0 ],
+					"patching_rect" : [ 619.0, 430.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -112,7 +112,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 525.0, 426.0, 30.0, 30.0 ],
+					"patching_rect" : [ 574.0, 430.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -176,9 +176,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 307.0, 615.0, 175.0, 22.0 ],
+					"patching_rect" : [ 338.0, 615.0, 231.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.matrix ---fg @dim 1920 1080"
+					"text" : "jit.matrix ---fg @dim 1920 1080 @interp 1"
 				}
 
 			}
@@ -189,9 +189,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 97.5, 615.0, 179.0, 22.0 ],
+					"patching_rect" : [ 97.5, 615.0, 234.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.matrix ---bg @dim 1920 1080"
+					"text" : "jit.matrix ---bg @dim 1920 1080 @interp 1"
 				}
 
 			}
@@ -294,9 +294,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 364.0, 355.0, 150.0, 22.0 ],
+					"patching_rect" : [ 364.0, 355.0, 206.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.matrix @dim 1920 1080"
+					"text" : "jit.matrix @dim 1920 1080 @interp 1"
 				}
 
 			}
@@ -358,7 +358,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 307.0, 650.0, 30.0, 30.0 ],
+					"patching_rect" : [ 338.0, 650.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -369,7 +369,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 219.5, 224.0, 579.5, 224.0 ],
+					"midpoints" : [ 219.5, 224.0, 628.5, 224.0 ],
 					"source" : [ "obj-100", 1 ]
 				}
 
@@ -379,7 +379,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 129.5, 237.0, 534.5, 237.0 ],
+					"midpoints" : [ 129.5, 237.0, 583.5, 237.0 ],
 					"source" : [ "obj-100", 0 ]
 				}
 
