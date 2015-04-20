@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 493.0, 79.0, 931.0, 935.0 ],
+		"rect" : [ 584.0, 79.0, 931.0, 935.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,32 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 482.0, 642.0, 77.0, 22.0 ],
+					"style" : "",
+					"text" : "dim 100 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 416.0, 575.0, 77.0, 22.0 ],
+					"style" : "",
+					"text" : "dim 800 600"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-111",
 					"linecount" : 2,
@@ -210,7 +236,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-35",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "color_13.png", ",", "color_14.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "color_13.png", ",", "color_14.png", ",", "foto_01.png", ",", "foto_02.png", ",", "foto_03.png", ",", "foto_04.png", ",", "foto_05.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -226,7 +252,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
-					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "color_13.png", ",", "color_14.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
+					"items" : [ "color_00.png", ",", "color_01.png", ",", "color_02.png", ",", "color_03.png", ",", "color_04.png", ",", "color_05.png", ",", "color_06.png", ",", "color_07.png", ",", "color_08.png", ",", "color_09.png", ",", "color_10.png", ",", "color_11.png", ",", "color_12.png", ",", "color_13.png", ",", "color_14.png", ",", "foto_01.png", ",", "foto_02.png", ",", "foto_03.png", ",", "foto_04.png", ",", "foto_05.png", ",", "mask_00.png", ",", "mask_01.png", ",", "mask_02.png", ",", "mask_03.png", ",", "mask_04.png", ",", "mask_05.png", ",", "mask_06.png", ",", "mask_07.png", ",", "mask_08.png" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1146,6 +1172,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-105", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1342,6 +1377,15 @@
 					"destination" : [ "obj-105", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-105", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"midpoints" : [ 24.5, 403.0, 295.5, 403.0 ],
 					"source" : [ "obj-99", 0 ]
 				}
@@ -1401,6 +1445,20 @@
 			}
 , 			{
 				"name" : "al.matrixgate.js",
+				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.cutnscale.maxpat",
+				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.cutnscale.js",
 				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
