@@ -2,7 +2,7 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3512383409,
+	"modificationdate" : 3512847728,
 	"viewrect" : [ 3.0, 51.0, 300.0, 811.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -46,6 +46,11 @@
 				"local" : 1
 			}
 ,
+			"al.cutnscale.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"al.line.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -53,11 +58,6 @@
 ,
 			"m4l.vjlxnr.amxd" : 			{
 				"kind" : "maxforlive",
-				"local" : 1
-			}
-,
-			"al.cutnscale.maxpat" : 			{
-				"kind" : "patcher",
 				"local" : 1
 			}
 
@@ -184,6 +184,14 @@
 ,
 			"al.cutnscale.js" : 			{
 				"kind" : "javascript",
+				"local" : 1
+			}
+
+		}
+,
+		"data" : 		{
+			"videores.txt" : 			{
+				"kind" : "textfile",
 				"local" : 1
 			}
 
