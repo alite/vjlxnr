@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 769.0, 79.0, 707.0, 967.0 ],
+		"rect" : [ 769.0, 79.0, 1040.0, 967.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,18 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 673.5, 855.0, 31.5, 20.0 ],
-					"style" : "",
-					"text" : "dim"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "newobj",
@@ -525,15 +513,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 693.5, 390.0, 758.5, 390.0 ],
 					"source" : [ "obj-10", 8 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-10", 7 ]
 				}
 
 			}
