@@ -2,8 +2,8 @@
 	"name" : "vjlxnr",
 	"version" : 1,
 	"creationdate" : 3504798605,
-	"modificationdate" : 3513337762,
-	"viewrect" : [ 3.0, 51.0, 300.0, 811.0 ],
+	"modificationdate" : 3517819665,
+	"viewrect" : [ 3.0, 51.0, 300.0, 314.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -26,12 +26,12 @@
 				"local" : 1
 			}
 ,
-			"al.sig2float.maxpat" : 			{
+			"al.randscalpos.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"al.randscalpos.maxpat" : 			{
+			"al.line.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -51,13 +51,18 @@
 				"local" : 1
 			}
 ,
-			"al.line.maxpat" : 			{
+			"al.sig2float.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"m4l.vjlxnr.amxd" : 			{
 				"kind" : "maxforlive",
+				"local" : 1
+			}
+,
+			"al.debug-snippets.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1
 			}
 
