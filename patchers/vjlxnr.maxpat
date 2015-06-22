@@ -38,13 +38,26 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-99",
+					"maxclass" : "dropfile",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 15.0, 72.5, 33.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 150.0, 15.0, 204.0, 32.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-74",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 519.0, 51.5, 60.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 243.0, 75.0, 75.0, 20.0 ],
+					"presentation_rect" : [ 269.625, 75.0, 75.0, 20.0 ],
 					"style" : "",
 					"text" : "refresh",
 					"textjustification" : 1
@@ -107,7 +120,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 499.5, 77.5, 59.5, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 243.0, 53.0, 75.0, 22.0 ],
+					"presentation_rect" : [ 150.0, 53.0, 93.75, 22.0 ],
 					"style" : ""
 				}
 
@@ -163,7 +176,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 519.0, 299.5, 60.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 149.0, 75.0, 76.0, 20.0 ],
+					"presentation_rect" : [ 155.25, 75.0, 76.0, 20.0 ],
 					"style" : "",
 					"text" : "refresh",
 					"textjustification" : 1
@@ -226,7 +239,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 499.5, 325.5, 59.5, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 53.0, 75.0, 22.0 ],
+					"presentation_rect" : [ 260.25, 53.0, 93.75, 22.0 ],
 					"style" : ""
 				}
 
@@ -353,7 +366,7 @@
 ,
 					"style" : "",
 					"text" : "pattr",
-					"varname" : "u001000311"
+					"varname" : "u007003673"
 				}
 
 			}
@@ -1128,19 +1141,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-99",
-					"maxclass" : "dropfile",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 15.0, 72.5, 33.0, 42.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 150.0, 15.0, 167.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-69",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -1148,7 +1148,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 49.5, 83.5, 73.666626, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 176.5, 20.0, 112.0, 20.0 ],
+					"presentation_rect" : [ 196.0, 21.0, 112.0, 20.0 ],
 					"style" : "",
 					"text" : "drop image folder",
 					"textjustification" : 1
