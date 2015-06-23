@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 869.0, 79.0, 1013.0, 965.0 ],
+		"rect" : [ 761.0, 79.0, 1121.0, 965.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -366,7 +366,7 @@
 ,
 					"style" : "",
 					"text" : "pattr",
-					"varname" : "u007003673"
+					"varname" : "u659003754"
 				}
 
 			}
@@ -437,7 +437,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 872.5, 619.5, 84.0, 22.0 ],
+					"patching_rect" : [ 850.0, 690.0, 84.0, 22.0 ],
 					"style" : "",
 					"text" : "print pwindow"
 				}
@@ -450,7 +450,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 760.5, 544.5, 49.0, 22.0 ],
+					"patching_rect" : [ 738.0, 615.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "getsize"
 				}
@@ -668,7 +668,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 491.5, 630.0, 30.0, 20.0 ],
+					"patching_rect" : [ 469.0, 700.5, 30.0, 20.0 ],
 					"style" : "",
 					"text" : "on"
 				}
@@ -998,13 +998,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-25",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 509.5, 495.0, 387.0, 22.0 ],
+					"patching_rect" : [ 509.5, 495.0, 606.0, 35.0 ],
 					"style" : "",
-					"text" : "jit.gl.videoplane vjlxnr.win @blend_enable 1 @blend multiply @interp 1"
+					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 0 @blend_enable 1 @depth_enable 0 @interp 1 @layer 2 @blend multiply"
 				}
 
 			}
@@ -1024,13 +1025,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-23",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 510.0, 235.5, 352.0, 22.0 ],
+					"patching_rect" : [ 510.0, 235.5, 606.0, 35.0 ],
 					"style" : "",
-					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 0 @blend_enable 1"
+					"text" : "jit.gl.videoplane vjlxnr.win @transform_reset 0 @blend_enable 1 @depth_enable 0 @interp 1 @layer 1 @blend alphablend"
 				}
 
 			}
@@ -1080,7 +1082,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 461.5, 630.0, 24.0, 24.0 ],
+					"patching_rect" : [ 439.0, 700.5, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 12.0, 105.0, 22.000002, 22.000002 ],
 					"style" : ""
@@ -1094,7 +1096,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "bang" ],
-					"patching_rect" : [ 461.5, 660.0, 89.0, 22.0 ],
+					"patching_rect" : [ 439.0, 730.5, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "al.rendermetro"
 				}
@@ -1107,7 +1109,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 461.5, 544.5, 75.0, 22.0 ],
+					"patching_rect" : [ 439.0, 615.0, 75.0, 22.0 ],
 					"style" : "",
 					"text" : "al.fullscreen"
 				}
@@ -1120,7 +1122,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 461.5, 582.5, 430.0, 22.0 ],
+					"patching_rect" : [ 439.0, 653.0, 430.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.window vjlxnr.win @depthbuffer 1 @doublebuffer 1 @interp 1 @fsmenubar 0"
 				}
@@ -1133,7 +1135,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 461.5, 690.0, 253.0, 22.0 ],
+					"patching_rect" : [ 439.0, 760.5, 253.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.render vjlxnr.win @erase_color 0. 0. 0. 1."
 				}
@@ -1349,7 +1351,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 770.0, 574.5, 471.0, 574.5 ],
+					"midpoints" : [ 747.5, 645.0, 448.5, 645.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -1714,7 +1716,6 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 448.5, 406.5, 519.0, 406.5 ],
 					"source" : [ "obj-73", 0 ]
 				}
 
@@ -1809,7 +1810,6 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 448.5, 162.0, 519.5, 162.0 ],
 					"source" : [ "obj-85", 0 ]
 				}
 
