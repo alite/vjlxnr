@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 717.0, 106.0, 795.0, 687.0 ],
+		"rect" : [ 1087.0, 81.0, 795.0, 687.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -486,9 +486,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 75.0, 75.0, 75.0, 22.0 ],
+					"patching_rect" : [ 75.0, 75.0, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "speedlim 50"
+					"text" : "qlim 50"
 				}
 
 			}
@@ -499,9 +499,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 294.0, 75.0, 75.0, 22.0 ],
+					"patching_rect" : [ 294.0, 75.0, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "speedlim 50"
+					"text" : "qlim 50"
 				}
 
 			}
@@ -512,9 +512,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 388.5, 75.0, 75.0, 22.0 ],
+					"patching_rect" : [ 388.5, 75.0, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "speedlim 50"
+					"text" : "qlim 50"
 				}
 
 			}
@@ -576,7 +576,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "float" ],
 					"patching_rect" : [ 30.0, 30.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -923,15 +923,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "al.line.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
