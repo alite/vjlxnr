@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 614.0, 79.0, 862.0, 965.0 ],
+		"rect" : [ 614.0, 79.0, 1087.0, 965.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -676,7 +676,7 @@
 ,
 					"style" : "",
 					"text" : "pattr",
-					"varname" : "u758000427"
+					"varname" : "u855007216"
 				}
 
 			}
@@ -2398,6 +2398,18 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "al.deflect.maxpat",
+				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.lor.maxpat",
+				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "al.folder2matrixset.maxpat",
 				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
 				"type" : "JSON",
@@ -2438,6 +2450,10 @@
 				"bootpath" : "~/Documents/Max 7/Projects/vjlxnr/patchers",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "jit.+.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"embedsnapshot" : 0
