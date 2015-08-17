@@ -5,7 +5,7 @@
 ## What it does …
 
 It moves and zooms an image according to the audio level which is grabbed at periodic intervals or by a given threshold. Optional a second image layer can be switched on, which moves independently from the other image. The resulting image is calculated by multiplicating the pixel values.
-The resultimg image also can be faded in and out or be modified by a color filter.
+The resulting image also can be faded in and out or be modified by a color filter.
 The design of this VJing tool is focussed on being mostly programmable/automatable. This way a musician can integrate video effects into performance without the need of taking hands off his music intrument.
 
 ## What it contains …
@@ -31,10 +31,10 @@ After dropping the device onto a track …
 3. Choose an image in the menu on the left top and enable the FX with the toggle left to it.
 4. Fade in the image by increasing the value of the black number box on the right of the image previews; play with the filter functionality be changing the RGB-numbers.
 5. Stream in music. Play with the various knobs, menus and faders; change zoom depth, intensity, tempo and smoothness of movement.
-6. Choose a second image in the right image menu, enable it by the toogle left to it and fade in the layer with the number box on the top right. Try various combinations. Hint: b/w images work good for masking!
+6. Choose a second image in the right image menu, enable it by the toggle left to it and fade in the layer with the number box on the top right. Try various combinations. Hint: b/w images work good for masking!
 7. Change the snyc rate in the menus below the faders - the images will move in sync with the metronome.
 8. Increase the threshold values, so the image movement will be influenced by beats, too. A value of '0' disables triggering by beats.
-9. Have fun! (You can find more information here: https://knotiz.columba.uberspace.de/redmine/projects/vjlxnr-public/wiki - mostly in German language …)
+9. Have fun! You can find more information [here](https://knotiz.columba.uberspace.de/redmine/projects/vjlxnr-public/wiki) - mostly in German language …
 
 ## Caveats / known issues
 
