@@ -34,7 +34,8 @@ After dropping the device onto a track …
 6. Choose a second image in the right image menu, enable it by the toggle left to it and fade in the layer with the number box on the top right. Try various combinations. Hint: b/w images work good for masking!
 7. Change the snyc rate in the menus below the faders - the images will move in sync with the metronome.
 8. Increase the threshold values, so the image movement will be influenced by beats, too. A value of '0' disables triggering by beats.
-9. Have fun! You can find more information [here](https://knotiz.columba.uberspace.de/redmine/projects/vjlxnr-public/wiki) - mostly in German language …
+9. Press 'ESC' to toggle fullscreen mode.
+10. Have fun! You can find more information [here](https://knotiz.columba.uberspace.de/redmine/projects/vjlxnr-public/wiki) - mostly in German language …
 
 ## Caveats / known issues
 
