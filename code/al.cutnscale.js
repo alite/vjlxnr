@@ -21,7 +21,7 @@ var xd = 320, yd = 240;
 var rd = xd / yd;
 
 function dim(x, y) {
-	if (y <= 0 || x <= 0) {
+	if (y < 1 || x < 1) {
 		error("Koordinaten müssen positiv sein!\n");
 		return;
 	}
