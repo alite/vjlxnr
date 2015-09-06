@@ -4,7 +4,7 @@
 
 ## What it does …
 
-It moves and zooms an image according to the audio level which is grabbed at periodic intervals or by a given threshold. Optional a second image layer can be switched on, which moves independently from the other image. The resulting image is calculated by multiplicating the pixel values.
+It moves and zooms an image according to the audio level which is grabbed at periodic intervals or by a given threshold. Optional a second image layer can be switched on, which moves independently of the other image layer. The resulting image is calculated by multiplicating the pixel values.
 The resulting image also can be faded in and out or be modified by a color filter.
 The design of this VJing tool is focussed on being mostly programmable/automatable. This way a musician can integrate video effects into performance without the need of taking hands off his music intrument.
 
@@ -18,7 +18,7 @@ The project contains a Max4Live audio device for use in Ableton Live and a folde
 * Select a resolution for the target window containing the video FX.
 * Drop a folder containing (up to 32) images (currently only PNGs are supported) on the dropfile zone.
 * Stream in sound.
-* Play with the knobs.
+* Play with the knobs, buttons and sliders.
 * Enjoy that psychedelic shit …
 * … or read the user manual below …
 
@@ -41,11 +41,19 @@ After dropping the device onto a track …
 
 * Before changing the image resolution or loading a new set of images it is recommende to stop the Live transport, since these actions need a lot of ressources and performance could hang.
 * Currently only PNG images are supported.
-* Due to limitations of the [live.menu] objects, there is a fixed number of 32 menu entries. If less than 32 images are loaded and a higher indexed menu entry is choosen, the resulting image will be black. This will be fixed in a futer release.
 
 # Changelog
 
-## Release 0.2.0
+## Release v0.2.1
+
+BugFix release
+
+* Fixed an issue where automation of changing both image layers to the same time didn't work as expected
+* Fixed an issue where selecting a higher image menu entry than the number of images loaded causes a black screen. Now higher indexes are mapped to lower ones.
+* Fixed an issue (at least tried to …) where sometimes one of the image layers freezes in movement
+* Some minor bugfixes and improvements
+
+## Release v0.2.0
 
 * Rewrite of movement algorithm
 * 'Smooth' values are now in sync with metronome
@@ -59,11 +67,11 @@ After dropping the device onto a track …
 * Settings now are saved with live set
 * Minor bugfixes
 
-## Release 0.1.1
+## Release v0.1.1
 
 * BugFix: Fixed freezing of image movement
 
-## Release 0.1.0
+## Release v0.1.0
 
 Initial Version - Prototype
 
