@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 734.0, 218.0, 614.0, 480.0 ],
+		"rect" : [ 250.0, 162.0, 614.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,13 +39,13 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-59",
-					"linecount" : 10,
+					"linecount" : 13,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 240.0, 75.0, 210.0, 141.0 ],
+					"patching_rect" : [ 240.0, 75.0, 214.0, 181.0 ],
 					"style" : "",
-					"text" : "al.random\n\nGibt eine Zufallszahl 0 < r <= 1 und\nEin \"Vorzeichen\" (-1, +1) aus\n\nInlet 1: Bang git Zufallswert aus\nInlet 2: Stellt \"Granularität\" ein\n\nOutlet 1: Zufallszahl\nOutlet 2: Vorzeichen "
+					"text" : "al.random\n\nGibt eine Zufallszahl 0 < r <= 1 und\nEin \"Vorzeichen\" (-1, +1) aus\n\nInlet 1: Bang gibt Zufallswert aus\nInlet 2: Stellt \"Granularität\"* ein\n\nOutlet 1: Zufallszahl\nOutlet 2: Vorzeichen \n\n* i.e. Nachkommastellen; 100 => 0.xy; 1000 => 0.xyz"
 				}
 
 			}
@@ -84,7 +84,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 30.0, 15.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -450,9 +450,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
