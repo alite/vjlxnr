@@ -22,6 +22,13 @@ The project contains a Max4Live audio device for use in Ableton Live and a folde
 * Enjoy that psychedelic shit …
 * … or read the user manual below …
 
+## Caveats / known issues
+
+* Before changing the image resolution or loading a new set of images it is recommende to stop the Live transport, since these actions need a lot of ressources and performance could hang.
+* Currently only PNG images are supported.
+* When using Ableton Push switching between note- and session-mode causes a short delay of video movement.
+* Some PNG files happen to not show in preview window and not to be rendered in [jit.window] - seems happen due to color profile issues - maybe ...
+
 # Details / Manual
 
 After dropping the device onto a track …
@@ -36,48 +43,4 @@ After dropping the device onto a track …
 8. Increase the threshold values, so the image movement will be influenced by beats, too. A value of '0' disables triggering by beats.
 9. Press 'ESC' to toggle fullscreen mode.
 10. Have fun! You can find more information [here](https://knotiz.columba.uberspace.de/redmine/projects/vjlxnr-public/wiki) - mostly in German language …
-
-## Caveats / known issues
-
-* Before changing the image resolution or loading a new set of images it is recommende to stop the Live transport, since these actions need a lot of ressources and performance could hang.
-* Currently only PNG images are supported.
-* When using Ableton Push switching between note- and session-mode causes a short delay of video movement.
-
-# Changelog
-
-## Release v0.2.1
-
-BugFix release
-
-* Fixed an issue where automation of changing both image layers at the same time causes undefined behaviour.
-* If a image number higher than the number of loaded images it is mapped to lower numbers by modulo calculation. This fixes the issue of black screen.
-* Fixed an issue (at least tried to …) where sometimes one of the image layers freezes in movement
-* Some minor bugfixes and improvements
-
-## Release v0.2.0
-
-* Rewrite of movement algorithm
-* 'Smoothness' is now in sync with metronome
-* Max/Jitter version ist no longer supported, focussed on m4l device
-* Fade-in, fade-out, color filter implemented
-* Fading of FG layer implemented
-* Independent settings of sync rate, threshold, etc. for each layer
-* Improved set of media data
-* Automatic reloading of images after changing resolution
-* Automapping for use with Ableton Push
-* Settings now are saved with live set
-* Minor bugfixes
-
-## Release v0.1.1
-
-* BugFix: Fixed freezing of image movement
-
-## Release v0.1.0
-
-Initial Version - Prototype
-
-* Added FG an BG image layer with independent movement
-* Added buffering of media data
-* Corrected ratio for different resolutions
-* Built Max/Jitter and Max4Live versions of the device
 
