@@ -1,0 +1,84 @@
+
+{{>toc}}
+
+h1. Technische Dokumentation
+
+_(Sämtliche verfügbaren Parameter werden auf einer [[Parameter|separaten Seite]] aufgeführt.)_
+
+h2. Funktionsweise
+
+Ein oder zwei von einander unabhängige Bildebenen - @[jit.gl.videoplane]s@ - werden entsprechend des zu einer bestimmten Zeit abgegriffenen Audiopegels und beeinflusst durch Zufallswerte in x, y und z-Richtung bewegt; dabei sollten die Werte so gewählt sein, dass immer das komplette Blickfeld mit einem Bildausschnitt gefüllt ist (s.u.).
+Der Abgriff des Audiopegels findet periodisch über eine einstellbare Taktrate (im M4L Device auch synchron zum Musik-Takt) oder über einen einstellbaren Schwellwert (oder eine Kombination aus beiden) statt. Die Intensität, (Zoom-) Tiefe und "Ruckeligkeit" der Bewegung ist - auch unabhängig für beide Bildebenen - einstellbar. Die zweite Bildebene lässt sich wahlweise zuschalten.
+
+h2. Einlesen der Bilddateien
+
+Im Patcher befindet sich ein @[dropfile]@, auf das ein Ordner gezogen werden kann; aus diesem Ordner werden bis zu 32 Bilddateien[1] eingelesen und in einem @[jit.matrixset]@ gespeichert.
+Die Bildauflösung kann (zuvor) eingestellt werden, wird die Bildauflösung geändert, wird das @[jit.matrixset]@ geleert und muss neu eingelesen werden.
+
+Entsprechen die eingelesenen Bilddateien nicht dem eingestellten Seitenverhältnis, werden sie entsprechend skaliert und beschnitten, indem im Bezug auf die jeweilige Bildmitte der obere und untere bzw. der linke und rechte Bildrand abgeschnitten wird, gemäß folgender Berechnung:
+
+!vjlxnr_img_scale_cut_formula.png!
+
+Die Skalierung sollte mittels @[jit.matrix]@ über das Attribut @@srcdim@ geschehen, wobei @@interp 1@ gesetzt sein sollte.
+Die bei Beschnitt zu wählende Teil-Matrix sollte die Bildmitte beinhalten und kann über die Attribute @@srcdimstart x, y@ sowie @@srcdimend x y@ gewählt werden (dabei muss @@usesrcdim 1@ gesetzt sein).
+
+
+h2. Bewegung der Bildebenen
+
+h3. Kameraposition
+
+Die Position der Kamera ist auf den Punkt @[0, 0, 2]@ festgelegt, der Kamerawinkel liegt bei 45°, _near_clip_ liegt bei @0.1@, d.h. die Bildebene kann auf der _z_-Achse zwischen dem Punkt 0 und dem Punkt 1,9 bewegt werden.
+
+h3. Ausgangsposition der Bildebene
+
+Die @[jit.gl.videoplane]@ hat im Ausgangszustand ihren Ursprungspunkt bei @[0, 0, 0]@, die Skalierung sollte so gewählt werden, dass das projizierte Bild nicht verzerrt dargestellt wird, also dem Seitenverhältnis das Anzeigefensters entspricht: @[x/y, 1, 1]@. Dies muss den @[jit.gl.videoplanes]@ über den Parameter @dim x y z@ mitgeteilt werden, wobei @y = 1.0@, @z = 1.0@ und @x@ variabel sein sollte.
+
+h3. Berechnung der nächsten Position
+
+Die Bewegung auf der _z_-Achse (zwischen Ursprung und Kamera) spiegelt direkt den abgegriffenen Audiopegel wider, der über den _scale_-Parameter skaliert werden kann. Dies geschieht durch eine Wurzelfunktion, wobei über den Parameter _scale_ der Wurzelexponent eingestellt wird. Der Parameter _sense_ skaliert als Faktor den Einfluss auf die Auslenkung in _z_-Richtung. Aus der Position auf der _z_-Achse ergibt sich mittels des Strahlensatzes jew. ein Betrag, um den die Bildebene in _x_- und _y_-Richtung verschoben werden kann. Diese Beträge werden per Zufallszahl, skaliert durch den _rand_-Parameter erzeugt[2].
+
+Die Skizze stellt links die Kameraposition dar (Scheitelpunkt des Winkels), rechts die Videoplane auf ihrer Ursprungsposition (@z = 0@) und in der Mitte eine ausgelenkte Videoplane (@z = d@). Bei der augelenkten Ebene liegt der Streckenabschnitt _*f*_ im sichtbaren Bereich des Kamerawinkels; abgezogen von der Bildhöhe _*h*_ ergibt _*g*_ den Betrag, um den die Ebene potentiell nach oben oder unten bzw. nach links oder rechts bewegt werden kann.
+
+{{thumbnail(Bewegung_Videoplane.png, size=800, title="Bewegung der Bildebene (Strahlensatz)")}}
+
+Die maximalen Auslenkungen berechnen sich nach folgender Formel (Strahlensatz):
+
+!formel_auslenkung.png!
+
+Dies muss jeweils unter Berücksichtigung der _x_- und _y_-Skalierung (als _h_-Werte) berechnet werden.
+
+Die so ermittelten _x_-, _y_- und _z_-Koordinaten dienen als neue Zielkoordinaten, auf die sich die Bildebene zubewegt. Die Geschwindigkeit dieser Bewegung wird durch den Parameter _smooth_ gesteuert. Dabei wir ein @[line]@-Objekt benutzt, dass einen zeitgesteuerten Übergang zu den neu ermittelten Zielkoordinaten ermöglicht.
+
+h3. Bewegung der Bildebenen
+
+Ankerpunkt ist die Ebenenmitte. Die aktuelle Position _P_ hat die Koordinaten _(x, y, z)_. Durch Erhalten eines neuen Pegels (taktsynchron oder durch threshold getriggert) wird eine neue Position _P'_ ermittelt, auf die sich die Ebene in der Zeit _t_ auf direktem Wege bewegt. Die Bewegung geschieht schrittweise in Abschnitten von _∆t_ (voreingestellt auf 30 ms). Zur Berechnung einer Position sind
+Koordinaten _<span class="z y, x,"></span>_. Durch Erhalten eines neuen
+
+* _t_ Eingestellte Abtastrate; relativ (Notenwerte), in Abhängigkeit der Transport-Clock; beeinflusst vom Parameter _smooth_ (dies wird hier nicht weiter berücksichtigt)
+* _d_ Zufällige Dämpfung; ein Wert von '0' bedeutet, dass die Auslenkung genau dem empfangenen Pegel entspricht, '1' bedeutet Dämpfung um einen zufälligen Faktor, der bis zum maximalen Pegel-Betrag dämpfen kann.
+* _r_ Einen Zufallswert (wird skaliert durch _d_)
+* _s_ Skalierungsfaktor; entsprechend der eingetsellten Bildauflösung; ist eigentlich nur für den _x_-Wert relevant, _y_ und z sollten immer 1.0 betragen.
+* _e_, _z_ Eingestellte _sense_ und _zoom_-Parameter
+
+Zur Durchführung der Bewegung einer Ebene wird ein @[line]@ Objekt benutzt, das im gewünschten Zeitraum (_t_) in der gewünschten Granularität (_∆t_) die entsprechnden Werte für die _z_-Achse (_z'_) ausgibt. Die neuen _x'_- und _y'_-Werte lassen sich aus _z'_ ermitteln:
+@_∆z_ = z' - z@
+
+
+h2. Überblenden der Bildebenen
+
+Neben den bewegten Bildebenen befindet sich im Hintergrund (_layer 0_) eine statische, bildlose Ebene, deren Farbe über (RGB-) Regler in der Effekt-Ansicht eingestellt werden kann; ein weiterer Regler dient wiederum als Multiplikator (für die RGB-Werte) und ermöglicht damit ein Ein- und Ausblenden.
+
+Bei den Bildebenen ist jeweils der Parameter @@blend multiply@ gesetzt, d.h. sämtliche Pixel-Farbwerte werden mit den dahinterliegenden Ebenen Multipliziert. Im Effekt bedeutet dies:
+
+* Ist nur die BG-Ebene aktiviert, dient die Multiplikator-Ebene als Ein-/Ausblend- bzw. Farb-Filter.
+* Ist zusätzlich die FG-Ebene (Mask) aktiviert, dient diese als Maske (im Falle einer Graustufen-Grafik) oder als Farbeffekt-Filter (bei farbigen Bildern)
+
+Die FG-Ebene ist ebenfalls noch mit einem _Fade-In/-Out_ Regler versehen, so, dass sie beliebig ein- und ausgeblendet werden kann. Aus Performance-Gründen wurde das zunächst verwendete @[jit.alphablend]@-Objekt durch ein @[jit.gl.pix]@-Objekt ersetzt, in dem das Fading programmiert wurde; dies gab eine signifikante Verbesserung der Performance.
+
+h2. Patcher
+
+Das Projekt umfasst -sowohl eine Standalone-Version (Max Project) wie auch- eine Max4Live Version in Form eines Audio-Effekts.
+Bei der M4L Varianten werden Einstellungen (auch Informationen über das geladene Bildmaterial) mit dem Liveset gespeichert
+
+
+fn1. Momentan werden nur PNG-Dateien unterstützt
