@@ -56,9 +56,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 135.0, 90.0, 33.0, 22.0 ],
+					"patching_rect" : [ 135.0, 90.0, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "qlim"
+					"text" : "qlim 33"
 				}
 
 			}
@@ -612,7 +612,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "float" ],
 					"patching_rect" : [ 255.0, 45.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -1232,21 +1232,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "al.deflect.maxpat",
-				"bootpath" : "~/Documents/Max 7/Max for Live Devices/m4l.vjlxnr Project/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "al.random.maxpat",
-				"bootpath" : "~/Documents/Max 7/Max for Live Devices/m4l.vjlxnr Project/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
