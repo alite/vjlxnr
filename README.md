@@ -24,7 +24,7 @@ The project contains a Max4Live audio device for use in Ableton Live and a folde
 
 ## Caveats / known issues
 
-* Before changing the image resolution or loading a new set of images it is recommende to stop the Live transport, since these actions need a lot of ressources and performance could hang.
+* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources and performance could hang.
 * Currently only PNG images are supported.
 * When using Ableton Push switching between note- and session-mode causes a short delay of video movement.
 * Some PNG files happen to not show in preview window and not to be rendered in [jit.window] - seems happen due to color profile issues - maybe ...
