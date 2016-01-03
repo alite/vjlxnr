@@ -22,8 +22,9 @@ Index	Parameter               Erklärung
 22		msk_smooth              19
 23		msk_zoom                18
 24		msk_thresh              09
-25		msk_bang                16
-26		msk_damp                17
+25      msk_sat                 14
+26		msk_bang                16
+27		msk_damp                17
 		msk_preview             27
 		msk_title               26
 		glb_dropzone            13
