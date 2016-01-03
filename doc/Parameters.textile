@@ -32,8 +32,9 @@ h3. Mask-Sektion
 * _[22]_ *msk_smooth* - Bewegungsdauer Maskenebene; analog img_smooth
 * _[23]_ *msk_zoom* - Beeinflussung z-Achse; analog img_zoom
 * _[24]_ *msk_thresh* - Schwellwert Maskenebene; analog img_thresh
-* _[25]_ *msk_bang* - Impuls-Anzeige / -Trigger; analog img_bang
-* _[26]_ *msk_damp* - Dämpfung Maskenebene; analog img_damp
+* _[25]_ *msk_sat* - Sättigung der Maskenebene
+* _[26]_ *msk_bang* - Impuls-Anzeige / -Trigger; analog img_bang
+* _[27]_ *msk_damp* - Dämpfung Maskenebene; analog img_damp
 * *msk_preview* - Vorschau Maskenebene; analog img_preview
 * *msk_title* - Titel / Dateiname Maskenebene
 
