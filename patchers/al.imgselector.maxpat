@@ -97,7 +97,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 102.0, 195.0, 49.0, 22.0 ],
 					"style" : "",
-					"text" : "delay 5"
+					"text" : "delay 1"
 				}
 
 			}
@@ -482,7 +482,33 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "al.folder2matrixset.maxpat",
+				"bootpath" : "~/Documents/Max 7/Max for Live Devices/m4l.vjlxnr Project/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.foldercontents.maxpat",
+				"bootpath" : "~/Documents/Max 7/Max for Live Devices/m4l.vjlxnr Project/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.cutnscale.maxpat",
+				"bootpath" : "~/Documents/Max 7/Max for Live Devices/m4l.vjlxnr Project/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "al.cutnscale.js",
+				"bootpath" : "~/Documents/Max 7/Max for Live Devices/m4l.vjlxnr Project/code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

@@ -17,8 +17,8 @@ h3. Image-Sektion
 * _[09]_ *img_rfilter* - Farbfilter rot; wirkt global.
 * _[10]_ *img_gfilter* - Farbfilter grün; wirkt global.
 * _[11]_ *img_bfilter* - Farbfilter blau; wirkt global.
-* _[12]_ *img_bang* - Zeigt einen durch Threshold getriggerten Impuls an; löst durch Klick einen Impuls aus.
-* _[13]_ *img_damp* - Anteil zufälliger Dämpfung der Bewegung in x- bzw. y-Richtung; '0' bedeutet keine Dämpfung. 
+* _[12]_ *img_damp* - Anteil zufälliger Dämpfung der Bewegung in x- bzw. y-Richtung; '0' bedeutet keine Dämpfung. 
+* *img_bang* - Zeigt einen durch Threshold getriggerten Impuls an
 * *img_preview* - Vorschaubild der Bildebene.
 * *img_title* - Titel / Dateiname des Bildes.
 
@@ -33,8 +33,8 @@ h3. Mask-Sektion
 * _[23]_ *msk_zoom* - Beeinflussung z-Achse; analog img_zoom
 * _[24]_ *msk_thresh* - Schwellwert Maskenebene; analog img_thresh
 * _[25]_ *msk_sat* - Sättigung der Maskenebene
-* _[26]_ *msk_bang* - Impuls-Anzeige / -Trigger; analog img_bang
-* _[27]_ *msk_damp* - Dämpfung Maskenebene; analog img_damp
+* _[26]_ *msk_damp* - Dämpfung Maskenebene; analog img_damp
+* *msk_bang* - Impuls-Anzeige / -Trigger; analog img_bang
 * *msk_preview* - Vorschau Maskenebene; analog img_preview
 * *msk_title* - Titel / Dateiname Maskenebene
 
