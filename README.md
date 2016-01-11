@@ -2,6 +2,8 @@
 
 … (one more) simple VJing tool made with Max/Jitter/Max4Live …
 
+<img src="doc/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
+
 ## What it does …
 
 It moves and zooms an image (_image layer_) according to the audio level which is sampled at periodic intervals or when exceeding a given threshold. Optional a second layer (_mask layer_) can be switched on, which moves independently of the other image layer. The resulting image is calculated by multiplicating the pixel values.
@@ -22,14 +24,36 @@ The project contains a Max4Live audio device for use in Ableton Live and a folde
 * Enjoy that psychedelic shit …
 * … or read the user manual below …
 
-## Caveats / known issues
-
-* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources so performance could lag.
-* Currently only PNG images are supported.
-* When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
-* Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
-
 # Details / Manual
+
+## Install
+
+### System requirements
+
+The device is built using Ableton Live 9.5 and Max 7.1 (64 bit) - it is not guaranteed to work with lower versions or on 32 bit systems.
+At least 8 GB RAM is required - depends on the media data to process.
+
+### Getting vjlxnr
+
+vjlxnr is hosted on [GitHub](https://github.com/AliTe/vjlxnr).
+
+The recomended way to get it is via [git](https://git-scm.com); see below.
+
+#### Download not using git
+
+Alternatively you can follow the [download link](https://github.com/AliTe/vjlxnr/archive/master.zip), which will provide you with a zip archive containing the whole project data. Unpack the archive to a folder where your Max4Live devices live and drop the file 'm4l.vjlxnr.amxd' onto an Ableton Live track. The media folder contains some sample images, you can drop onto the drop file area of the device (the grey, framed area right  hand side).
+
+In case you just want to get the device file without the media folder, simply try [this link](https://github.com/AliTe/vjlxnr/raw/master/m4l.vjlxnr.amxd) - this should trigger the download.
+
+#### Download using git
+
+If you are not familiar with command line tools on your computer, there are several graphical user interfaces you cann use, for example [GitHub Desktop](https://desktop.github.com) or  [Sourcetree](https://www.sourcetreeapp.com).
+
+Just open a terminal, point to a directory you want vjlxnr installed an type `git clone https://github.com/AliTe/vjlxnr.git`
+This will create a folder 'vjlxnr' in which you will find the Max4Live project.
+If an update is available you simply have to do a
+`git fetch; git pull`
+and you got the new version.
 
 ## Quickstart
 
@@ -85,3 +109,11 @@ Control elements of the vjlxnr user interface:
 All parameters - except 13, 15, 16, 22, 26 and 27 - can be used by automation and are saved within the Live Set in Ableton Live.
 
 For release notes refer to [Changelog.md](Changelog.md).
+
+## Caveats / known issues
+
+* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources so performance could lag.
+* Currently only PNG images are supported.
+* When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
+* Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
+
