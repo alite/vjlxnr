@@ -1,5 +1,24 @@
 # Changelog
 
+_(Versions tagged 'vX.Y.Z+freeze' are not mentioned here, they relate to the respective versions but are the 'frozen' versions of the device, as recommended for distribution)_
+
+## Caveats / known issues
+
+* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources so performance could lag.
+* Currently only PNG images are supported.
+* When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
+* Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
+
+## Release v0.3.2
+
+* Added install instructions to README
+* Added system requirements to README
+* Fixed some Typos
+
+## Release v0.3.1
+
+* Bugfix: added missing media files to docs
+
 ## Release v0.3.0
 
 * Further efforts in fixing an issue where movement of a layer got frozen - it seems chances are good this is fixed now
@@ -14,14 +33,6 @@
 * New feature: random damping of deflection in x- and y-direction
 * New feature: saturation filter for mask layer
 * New feature: image resolution now can be set automatically according to window size
-
-### Caveats / known issues
-
-* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources so performance could lag.
-* Currently only PNG images are supported.
-* When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
-* Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
-
 
 ## Release v0.2.1
 
