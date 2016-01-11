@@ -2,11 +2,13 @@
 
 … (one more) simple VJing tool made with Max/Jitter/Max4Live …
 
+<img src="doc/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
+
 ## What it does …
 
 It moves and zooms an image (_image layer_) according to the audio level which is sampled at periodic intervals or when exceeding a given threshold. Optional a second layer (_mask layer_) can be switched on, which moves independently of the other image layer. The resulting image is calculated by multiplicating the pixel values.
 The resulting image also can be faded in and out or be modified by color filters.
-The design of this VJing tool is focussed on being mostly programmable/automatable. This way a musicians can integrate video effects in their performance without the need of taking hands off their musical intruments.
+The design of this VJing tool is focussed on being mostly programmable/automatable. This way sicians can integrate video effects in their performance without the need of taking hands off their musical intruments.
 
 ## What it contains …
 
@@ -16,20 +18,42 @@ The project contains a Max4Live audio device for use in Ableton Live and a folde
 
 * Drop the M4L audio device onto a track in Ableton Live.
 * Select a resolution for the target window containing the video FX.
-* Drop a folder containing (up to 32) images (currently only PNGs are supported) on the dropfile zone.
+* Drop a folder containing (up to 32) images (currently only PNGs are supported) onto the dropfile zone.
 * Stream in sound.
 * Play with the knobs, buttons and sliders.
 * Enjoy that psychedelic shit …
 * … or read the user manual below …
 
-## Caveats / known issues
-
-* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources so performance could lag.
-* Currently only PNG images are supported.
-* When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
-* Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
-
 # Details / Manual
+
+## Install
+
+### System requirements
+
+The device is built using Ableton Live 9.5 and Max 7.1 (64 bit) - it is not guaranteed to work with lower versions or on 32 bit systems.
+At least 8 GB RAM is required - depends on the media data to process.
+
+### Getting vjlxnr
+
+vjlxnr is hosted on [GitHub](https://github.com/AliTe/vjlxnr).
+
+The recomended way to get it is via [git](https://git-scm.com); see below.
+
+#### Download not using git
+
+Alternatively you can follow the [download link](https://github.com/AliTe/vjlxnr/archive/master.zip), which will provide you with a zip archive containing the whole project data. Unpack the archive to a folder where your Max4Live devices live and drop the file 'm4l.vjlxnr.amxd' onto an Ableton Live track. The media folder contains some sample images, you can drop onto the drop file area of the device (the grey, framed area right  hand side).
+
+In case you just want to get the device file without the media folder, simply try [this link](https://github.com/AliTe/vjlxnr/raw/master/m4l.vjlxnr.amxd) - this should trigger the download.
+
+#### Download using git
+
+If you are not familiar with command line tools on your computer, there are several graphical user interfaces you can use, for example [GitHub Desktop](https://desktop.github.com) or  [Sourcetree](https://www.sourcetreeapp.com).
+
+Just open a terminal, point to a directory you want vjlxnr installed an type `git clone https://github.com/AliTe/vjlxnr.git`
+This will create a folder 'vjlxnr' in which you will find the Max4Live project.
+If an update is available you simply have to do a
+`git fetch; git pull`
+and you got the new version.
 
 ## Quickstart
 
@@ -38,16 +62,16 @@ After dropping the device onto a track …
 1. Choose a resolution (for fullscreen mode) in the menu at the right bottom.
 2. Drop a folder containing up to 32 PNG images onto the drop file zone.
 3. Choose an image in the menu on the left top and enable the FX with the toggle left to it (1.).
-4. Fade in the image by increasing the value of the number box on the right top of the image previews (4.); play with the filter functionality by changing the RGB-numbers (10. to 12.).
+4. Fade in the image by increasing the value of the number box on the right top of the image previews (4.); play with the filter functionality by changing the RGB-values (10. to 12.).
 5. Stream in music. Play with the various knobs, menus and faders; change zoom depth, intensity, tempo and smoothness of movement.
 6. Choose a second image in the right image menu, enable it by the toggle left to it and fade in the layer using the number box on the top right. Try various combinations. Hint: b/w images work good for masking!
-7. Change the snyc rate in the menus (3. and 6.) - the images will move in sync with the metronome.
+7. Change the snyc rate in the menus (3. and 7.) - the images will move in sync with the metronome.
 8. Increase the threshold values, so the image movement will be influenced by beats, too. A value of '0' disables triggering by beats.
 9. Press 'ESC' to toggle fullscreen mode.
 
 ## Overview
 
-Control elements of the vjlxnr user interface:
+Controls of the vjlxnr user interface:
 
 <img src="doc/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
 
@@ -59,9 +83,9 @@ Control elements of the vjlxnr user interface:
 4. Global fade in/out
 5. Turn on/off mask layer
 6. Select image for mask layer
-7. Sync rate mask layer; see 2.
+7. Sync rate mask layer; see 3.
 8. Fade in/out of mask layer
-9. Threshold mask layer; if the audio level exceeds the threshold, an additional impulse is triggered independent of the sync rate
+9. Threshold mask layer; if the audio level exceeds the threshold, an additional impulse is triggered independent of the sync rate; a value of '0' disables threshold triggering
 10. Red filter; decreasing fades out the red channel of the resulting image; changing this parameter has global effect
 11. Green filter; decreasing fades out the green channel of the resulting image; changing this parameter has global effect
 12. Blue filter; decreasing fades out the blue channel of the resulting image; changing this parameter has global effect
@@ -85,3 +109,12 @@ Control elements of the vjlxnr user interface:
 All parameters - except 13, 15, 16, 22, 26 and 27 - can be used by automation and are saved within the Live Set in Ableton Live.
 
 For release notes refer to [Changelog.md](Changelog.md).
+
+## Caveats / known issues
+
+* Before changing the image resolution or loading a new set of images it is recommended to stop the Live transport, since these actions need a lot of ressources so performance could lag.
+* Currently only PNG images are supported.
+* When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
+* Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
+
+The recommended place for reporting issues is the [github issue tracker](https://github.com/AliTe/vjlxnr/issues)
