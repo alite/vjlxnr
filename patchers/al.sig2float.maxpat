@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 821.0, 259.0, 485.0, 573.0 ],
+		"rect" : [ 203.0, 234.0, 485.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -127,7 +127,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 285.0, 300.0, 89.333336, 22.0 ],
 					"style" : "",
-					"text" : "metro 8n"
+					"text" : "qmetro 8n"
 				}
 
 			}
