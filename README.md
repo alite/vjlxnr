@@ -6,13 +6,13 @@
 
 ## What it does …
 
-It moves and zooms an image (_image layer_) according to the audio level which is sampled at periodic intervals or when exceeding a given threshold. Optional a second layer (_mask layer_) can be switched on, which moves independently of the other image layer. The resulting image is calculated by multiplicating the pixel values.
-The resulting image also can be faded in and out or be modified by color filters.
-The design of this VJing tool is focussed on being mostly programmable/automatable. This way sicians can integrate video effects in their performance without the need of taking hands off their musical intruments.
+It moves and zooms an image (_image layer_) according to the audio level which is sampled at periodic intervals or when exceeding a given threshold. Optional a second layer (_mask layer_) can be switched on, which is moved independently with it's own set of parameters. The resulting image is calculated by multiplicating the pixel values.
+The calculated video effect can be faded in and out or be modified by color filters.
+The design of this VJing tool is focussed on being mostly programmable/automatable. This way musicians can integrate video effects in their performance without the need of taking hands off their musical intruments.
 
 ## What it contains …
 
-The project contains a Max4Live audio device for use in Ableton Live and a folder containing a set of images for free use. (See [License](LICENSE.txt))
+The project contains a Max4Live audio device for use in Ableton Live and a folder containing a set of sample images for free use. (See [License](LICENSE.txt))
 
 ## How it works …
 
@@ -49,10 +49,15 @@ In case you just want to get the device file without the media folder, simply tr
 
 If you are not familiar with command line tools on your computer, there are several graphical user interfaces you can use, for example [GitHub Desktop](https://desktop.github.com) or  [Sourcetree](https://www.sourcetreeapp.com).
 
-Just open a terminal, point to a directory you want vjlxnr installed an type `git clone https://github.com/AliTe/vjlxnr.git`
+Just open a terminal, point to a directory you want vjlxnr installed and type 
+
+`git clone https://github.com/AliTe/vjlxnr.git`
+
 This will create a folder 'vjlxnr' in which you will find the Max4Live project.
 If an update is available you simply have to do a
+
 `git fetch; git pull`
+
 and you got the new version.
 
 ## Quickstart
@@ -66,7 +71,7 @@ After dropping the device onto a track …
 5. Stream in music. Play with the various knobs, menus and faders; change zoom depth, intensity, tempo and smoothness of movement.
 6. Choose a second image in the right image menu, enable it by the toggle left to it and fade in the layer using the number box on the top right. Try various combinations. Hint: b/w images work good for masking!
 7. Change the snyc rate in the menus (3. and 7.) - the images will move in sync with the metronome.
-8. Increase the threshold values, so the image movement will be influenced by beats, too. A value of '0' disables triggering by beats.
+8. Increase the threshold values, so the image movement will be influenced by beats, too.
 9. Press 'ESC' to toggle fullscreen mode.
 
 ## Overview
@@ -86,14 +91,14 @@ Controls of the vjlxnr user interface:
 7. Sync rate mask layer; see 3.
 8. Fade in/out of mask layer
 9. Threshold mask layer; if the audio level exceeds the threshold, an additional impulse is triggered independent of the sync rate; a value of '0' disables threshold triggering
-10. Red filter; decreasing fades out the red channel of the resulting image; changing this parameter has global effect
-11. Green filter; decreasing fades out the green channel of the resulting image; changing this parameter has global effect
-12. Blue filter; decreasing fades out the blue channel of the resulting image; changing this parameter has global effect
-13. Drop zone; move and drop a folder containing up to 32 PNG files onto this area; the media data gets compiled (according the resolution parameter, see 15.) and buffered for effective use during performance (this process can take some time); keep in mind that the video gets stuck during this operation, so it should be avoided while the transport of your DAW is running; once the media data is prepared, ist is saved within the Live Set
+10. Red filter; fades in and out out the red channel of the resulting image; changing this parameter has global effect
+11. Green filter; fades in and out out the green channel of the resulting image; changing this parameter has global effect
+12. Blue filter; fades in and out out the blue channel of the resulting image; changing this parameter has global effect
+13. Drop zone; move and drop a folder containing up to 32 PNG files onto this area; the media data gets compiled (according the resolution parameter, see 15.) and buffered for effective use during performance (this process can take some time); keep in mind that the video can get stuck during this operation, so it should be avoided while the transport of your DAW is running; once the media data is prepared, ist is saved within the Live Set
 14. Saturation (color) of the mask layer
-15. Video resolution; this parameter changes the size of the buffered media data (it does NOT set the size of the video window!); should be choosen according to the device playing the video (i.e. for use with a full HD beamer, set it to 1920x1080), but keep in mind the higher the resolution, the more memory and CPU is used (every change of an image causes copying image data from RAM memory to the graphics card memory); lsetting this value to 'auto' scales the image to fit in the actual size of the video window, 'auto 2x' sets it to 4 times the actual size
+15. Video resolution; this parameter changes the size of the buffered media data (it does NOT set the size of the video window! The size aof the video window must be set manually or by pressing 'ESC' to enter full screen mode.); should be choosen according to the device playing the video (i.e. for use with a full HD beamer, set it to 1920x1080), but keep in mind the higher the resolution, the more memory and CPU is used (every change of an image causes copying image data from RAM memory to the graphics card memory); lsetting this value to 'auto' scales the image to fit in the actual size of the video window, 'auto 2x' sets it to 4 times the actual size (if you want to choose these values, you should do it after sizing the video window!)
 16. Indicator of a threshold impulse - mask layer
-17. Random damping of the movement in x- and y-direction of the mask layer; a value of '0' means no damping occurs, a value of '100' means deflection depends to 100% on accident
+17. Random damping of the movement in x- and y-direction of the mask layer; a value of '0' means no damping occurs, a value of '100' means deflection happens to 100% by accident
 18. Influences the amount of movement in z-direction of the mask layer
 19. Influences the smoothness of movement of the mask layer; a value of '1' means, moving the layer to the new/next position takes exactly as long as set by the parameter sync rate; higher values lead to slower, 'smoother' and shorter movement (the layer will never reach it's next position), smaller values speed up movement so the layer will remain at the target position until the next position is requested (leads to a more chopped movement)
 20. Sensitivity of the movement of the mask layer; sets the amount the audio level influences the layer movement

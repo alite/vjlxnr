@@ -4,7 +4,7 @@ h1. VJlxnr
 
 h2. Was tut es?
 
-Es greift den Pegel des eingehenden Audiosignals ab und setzt ihn in eine Bewegung eines Bildes (_Bildebene_) um. Das Abgreifen des Audiopegels geschieht in einem periodischen Zeitintervall, beim Überschreiten eines Schwellwertes oder einer Kombination aus diesen beiden.
+Es greift den Pegel des eingehenden Audiosignals ab und setzt ihn in eine Bewegung eines Bildes (_Bildebene_) um. Das Abgreifen des Audiopegels erfolgt in einem periodischen Zeitintervall, beim Überschreiten eines Schwellwertes oder einer Kombination aus diesen beiden.
 Optional kann eine zweite Bildebene (_Maskenebene_) eingeblendet werden; das resultierende Bild entsteht aus der Multiplikation der Pixelwerte der Bilder. Zudem stehen Farbfilter - rot, grün und blau - und für die Maskenebene ein Farbsättigungsfilter zur Verfügung.
 Die Intensiät der Bewegung, die Abtastrate und der Schwellwert kann für beide Bild-Ebenen unabhängig voneinander eingestellt werden. Auf diese Weise lassen sich unzählige Variationen des Videoeffekts erstellen.
 
@@ -20,7 +20,7 @@ h3. Wie benutzt man es?
 
 # Das Max4Live-Gerät auf eine Spur in Ableton Live ziehen
 # Die gewünschte Bildauflösung wählen
-# Einen Ordner mit PNG-Bildern auf die File-Drop-Zone ziehen (oder die standardmäßig aktivierten mitgelieferten Mediandaten nutzen)
+# Einen Ordner mit PNG-Bildern auf die File-Drop-Zone ziehen (oder die standardmäßig mitgelieferten Mediandaten nutzen)
 # Den Toggle (1.) links oben klicken, um den Effekt zu aktivieren; den Fade Parameter (4.) erhöhen, um die Bildebene einzublenden.
 # Audiodaten in diesem Track abspielen und mit den Reglern spielen oder Automationen programmieren …
 # Optional die Maskenebene aktivieren (5.) und einblenden (8.).
