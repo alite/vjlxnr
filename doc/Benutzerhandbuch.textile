@@ -1,0 +1,68 @@
+h1. VJlxnr
+
+… (noch ein) simples VJing Tool - ein Max4Live Video-Device …
+
+h2. Was tut es?
+
+Es greift den Pegel des eingehenden Audiosignals ab und setzt ihn in eine Bewegung eines Bildes (_Bildebene_) um. Das Abgreifen des Audiopegels erfolgt in einem periodischen Zeitintervall, beim Überschreiten eines Schwellwertes oder einer Kombination aus diesen beiden.
+Optional kann eine zweite Bildebene (_Maskenebene_) eingeblendet werden; das resultierende Bild entsteht aus der Multiplikation der Pixelwerte der Bilder. Zudem stehen Farbfilter - rot, grün und blau - und für die Maskenebene ein Farbsättigungsfilter zur Verfügung.
+Die Intensiät der Bewegung, die Abtastrate und der Schwellwert kann für beide Bild-Ebenen unabhängig voneinander eingestellt werden. Auf diese Weise lassen sich unzählige Variationen des Videoeffekts erstellen.
+
+Bei der Entwicklung dieses Max4Live Video-Devices wurde der Fokus auf die "Programmierbarkeit" und "Automatisierbarkeit" gelegt - so dass auch in der Live-Performance eines Musikers ohne viel einzugreifen eine effektive, interagierende Viedeoperformance möglich ist - so gut wie alle Parameter des Effekts sind in Ableton Live automatisierbar und/oder als Presets abzuspeichern.
+
+Der interne Puffer des Devices kann bis zu 32 Bildern fassen (momentan werden nur PNG-Dateien unterstützt), die unmittelbar ohne Ladezeiten angewählt werden können. Eine Auswahl an (frei verwendbaren) Grafiken ist dem Device beigefügt, es können aber auch per Drag&Drop eigene Bilder benutzt werden.
+
+h2. Wie funktioniert es?
+
+!doc/img/vjlxnr-gui.png!
+
+h3. Wie benutzt man es?
+
+# Das Max4Live-Gerät auf eine Spur in Ableton Live ziehen
+# Die gewünschte Bildauflösung wählen
+# Einen Ordner mit PNG-Bildern auf die File-Drop-Zone ziehen (oder die standardmäßig mitgelieferten Mediandaten nutzen)
+# Den Toggle (1.) links oben klicken, um den Effekt zu aktivieren; den Fade Parameter (4.) erhöhen, um die Bildebene einzublenden.
+# Audiodaten in diesem Track abspielen und mit den Reglern spielen oder Automationen programmieren …
+# Optional die Maskenebene aktivieren (5.) und einblenden (8.).
+# 'ESC' bei aktivem Videofenster schaltet in den Vollbildmodus
+
+h3. Detailierte Beschreibung der Elemente der Benutzerschnittstelle
+
+# Effekt ein- und ausschalten
+# Bild für die Bildebene auswählen
+# Synchronisationsrate der Bildebene einstellen; im angegebenen Takt wird jeweils der Audiopegel abgegriffen  und ein entsprechender Bewegungsimpuls angestossen
+# Ein- und ausblenden der Bildebene
+# Maskenebene ein-/ausschalten
+# Bild für die Maskenebene auswählen
+# Synchronisationsrate der Maskenebene einstellen; analog zu 3.
+# Ein- und ausblenden der Maskenebene
+# Schwellwert (threshold) für Maskenebene einstellen; überschreitet der Audiopegel den eingestellten Wert, wid unabhängig von der eingestellten Synchronisationsrate (2.) ein zusätzlicher Impuls angestossen
+# Rotfilter; reduziert den Rotkanal des resultierenden Bildes; hat globale Auswirkungen
+# Grünfilter; reduziert den Grünkanal des resultierenden Bildes; hat globale Auswirkungen
+# Blaufilter; reduziert den Blaukanal des resultierenden Bildes; hat globale Auswirkungen
+# Drop Zone; an diese Stelle kann ein Ordner mit bis zu 32 PNG Dateien gezogen werden; die Mediendaten werden - entsprechend der eingestellten Auflösung (siehe 15.) - präpariert und gepuffert (dieser Vorgang kann etwas Zeit beanspruchen), so stehen die Mediendaten während der Perfomance nahezu ohne Ladezeiten zur Verfügung; während dieser Aktion findet keine Videoanimation statt, sie sollte nur ausgeführt werden, wenn der Transport nicht läuft; die so präparierten Mediendaten werden zusammen mit dem Live Set gespeichert
+# Sättigung der Maskenebene; hier kann die Farbsättigung der Maske verändert werden
+# Auflösung der Videoanzeige; dieser Parameter bestimmt die Bildauflösung der gepufferten Mediendaten (hiermit ist nicht die Größe des Videofensters gemeint!), sie sollte mindestens so groß wie die gewünschte Darstellung gewählt werden (i.e. zur Darstellung auf beispielsweise einem Full HD fähigem Beamer min. 1920x1080), sie sollte aber - entsprechend der Leistungsfähigkeit der Hardware - nicht zu groß gewählt werden (jeder Bildwechsel hat ein Kopieren der Bilddaten vom Arbeitsspeicher in den Speicher der Grafikkarte zur Folge); die Einstellung 'auto' liest die aktuelle Größe des Videofensters ein und skaliert das Bild entsprechend, 'auto 2x' skaliert auf jew. doppelte Seitenlänge
+# Impulsanzeige - blinkt auf, wenn eine Schwellwertüberschreitung stattgefunden hat
+# Zufallsgesteuerte Bewegungsdämpfung der Maskenebene - ein Wert von '0' beeinflusst die Auslenkung (in x- und y-Richtung) nicht, '100' bewirkt, dass die Auslenkung zu 100% von einem Zufallswert abhängt
+# Beeinflusst, wie stark sich der Audiopegel in eine Bewegung entlang der z-Achse auswirkt - Maskenebene
+# Beeinflusst die "Geschmeidigkeit" der Bildbewegung - Maskenebene; bei einem Wert von '1' dauert die Bewegung bis zur neuen Position exakt so lange wie die eingestellte Synchronisationsrate, bei kleineren Werten erreicht die Ebene die Zielposition früher und verharrt dort bis zum nächsten Zyklus - es entsteht eine abgehackte Bewegung - bei größeren Werten erreicht die Ebene ihre neue Position nicht, bevor ein neuer Zyklus anbricht - es entstehen eher sanftere Bewegungen - Maskenebene
+# Empfindlichkeit - Maskenebene; bestimmt, wie empfindlich auf die Lautstärke des Audiopegels reagiert wird
+# Zufällige Bewegungsdämpfung Bildebene; siehe 17.
+# Impulsanzeige - Bildebene; siehe 16.
+# Zoom - Bildebene; siehe 18.
+# "Geschmeidigkeit" - Bildebene; siehe 19.
+# Empfindlichkeit - Bildebene; siehe 20.
+# Titel/Dateiname des jew. gewählten Bildes
+# Vorschau des jew. gewählten Bildes.
+# Schwellwert - Bildebene; siehe 9.
+
+Alle Parameter - bis auf 13, 15, 16, 22, 26 und 27 sind in Ableton Live automatisierbar und werden zusammen mit dem Liveset gespeichert.
+
+h2. Wo bekomme ich es?
+
+Das Max4Live Effekt-Gerät ist verfügbar auf "GitHub":https://github.com/AliTe/vjlxnr und "maxforlive.com":http://www.maxforlive.com/library/device/2973/vjlxnr
+
+Es ist unter "MIT-Lizenz veröffentlicht":http://opensource.org/licenses/MIT
+
+Weitere Informationen zur aktuellen Version sind in der Datei "Changelog.md":Changelog.md zu finden
