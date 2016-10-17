@@ -16,10 +16,10 @@
 title: VJlxnr - (One More) Simple VJing Tool
 email: info@vj.lxnr.de
 description: > # this means to ignore newlines until "baseurl:"
-    VJlxnr is VJing tool, a max4live device for use in Ableton Live
+    VJlxnr is a VJing tool made with Max/Jitter/Max4Live.
+    You can use it as a FX plugin for Ableton Live.
     It is mainly focussed on beeing programmable/automatable so musicians
     and DJs can integrate hands-off-video-fx in their performance.
-    It is made with Max/Jitter/Max4Live.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vj.lxnr.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 4l3xnr
