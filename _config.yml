@@ -13,22 +13,26 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: VJlxnr - (One More) Simple VJing Tool
+email: info@vj.lxnr.de
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    VJlxnr is VJing tool, a max4live device for use in Ableton Live
+    It is mainly focussed on beeing programmable/automatable so musicians
+    and DJs can integrate hands-off-video-fx in their performance.
+    It is made with Max/Jitter/Max4Live.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://vj.lxnr.de" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: 4l3xnr
+github_username:  AliTe
 
 # Build settings
 markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+include:
+    - _pages
+permalink: /:title/
 exclude:
   - Gemfile
   - Gemfile.lock
