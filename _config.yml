@@ -1,0 +1,51 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: VJlxnr - (One More) Simple VJing Tool
+email: info@vj.lxnr.de
+description: > # this means to ignore newlines until "baseurl:"
+    VJlxnr is a VJing tool made with Max/Jitter/Max4Live.
+    You can use it as a FX plugin for Ableton Live.
+    It is mainly focussed on beeing programmable/automatable so musicians
+    and DJs can integrate hands-off-video-fx in their performance.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://vj.lxnr.de" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: 4l3xnr
+github_username:  AliTe
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+  - jekyll-textile-converter
+include:
+    - _pages
+permalink: /:title/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+collections:
+    documentation:
+        output: true
+        permalink: /docs/:path/
+
+defaults:
+    - scope:
+        path: ""
+        type: documentation
+      values:
+          layout: page
