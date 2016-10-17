@@ -3,8 +3,10 @@ layout: page
 title: Documentation
 permalink: /docs/
 ---
+… here you will find a loose collection of things documenting various aspects 
+of VJlxnr …
 
-# Documentation, tech. Sepcs and other Resources
+# Documentation, tech. Specs and other Resources
 
 {% for doc in site.documentation %}
 <h2>

@@ -1,3 +1,10 @@
+---
+title: Benutzerhandbuch (Manual de)
+layout: page
+permalink: /docs/manual_de/
+description: Benutzerhandbuch in deutsch (Manual in German)
+---
+
 h1. VJlxnr
 
 … (noch ein) simples VJing Tool - ein Max4Live Video-Device …
@@ -14,7 +21,7 @@ Der interne Puffer des Devices kann bis zu 32 Bildern fassen (momentan werden nu
 
 h2. Wie funktioniert es?
 
-!doc/img/vjlxnr-gui.png!
+!/docs/img/vjlxnr-gui.png!
 
 h3. Wie benutzt man es?
 

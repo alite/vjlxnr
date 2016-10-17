@@ -30,9 +30,22 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-textile-converter
 include:
     - _pages
 permalink: /:title/
 exclude:
   - Gemfile
   - Gemfile.lock
+
+collections:
+    documentation:
+        output: true
+        permalink: /docs/:path/
+
+defaults:
+    - scope:
+        path: ""
+        type: documentation
+      values:
+          layout: page
