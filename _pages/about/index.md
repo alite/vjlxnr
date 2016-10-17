@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-VJlxnr is free software licensed under the [MIT License](/license/).
+VJlxnr is free software licensed under the [MIT License](https://github.com/AliTe/vjlxnr/blob/master/LICENSE.txt).
 
 The sources of VJlxnr can be found at [GitHub](https://github.com/AliTe/vjlxnr).
 

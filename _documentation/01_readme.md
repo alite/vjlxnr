@@ -19,7 +19,7 @@ The design of this VJing tool is focussed on being mostly programmable/automatab
 
 ## What it contains …
 
-The project contains a Max4Live audio device for use in Ableton Live and a folder containing a set of sample images for free use. (See [License](/license/))
+The project contains a Max4Live audio device for use in Ableton Live and a folder containing a set of sample images for free use. (See [License](https://github.com/AliTe/vjlxnr/blob/master/LICENSE.txt))
 
 ## How it works …
 
