@@ -7,7 +7,7 @@ description: Technische Beschreibung deutsch (Tech. Specs. German)
 
 h1. Technische Dokumentation
 
-_(Sämtliche verfügbaren Parameter werden auf einer "separaten Seite":/docs/parameters/ aufgeführt.)_
+_(Sämtliche verfügbaren Parameter werden auf einer "separaten Seite":{{site.baseurl}}/docs/parameters/ aufgeführt.)_
 
 h2. Funktionsweise
 
@@ -21,7 +21,7 @@ Die Bildauflösung kann (zuvor) eingestellt werden, wird die Bildauflösung geä
 
 Entsprechen die eingelesenen Bilddateien nicht dem eingestellten Seitenverhältnis, werden sie entsprechend skaliert und beschnitten, indem im Bezug auf die jeweilige Bildmitte der obere und untere bzw. der linke und rechte Bildrand abgeschnitten wird, gemäß folgender Berechnung:
 
-!/docs/img/vjlxnr_img_scale_cut_formula.png!
+!{{site.baseurl}}/docs/img/vjlxnr_img_scale_cut_formula.png!
 
 Die Skalierung sollte mittels @[jit.matrix]@ über das Attribut @@srcdim@ geschehen, wobei @@interp 1@ gesetzt sein sollte.
 Die bei Beschnitt zu wählende Teil-Matrix sollte die Bildmitte beinhalten und kann über die Attribute @@srcdimstart x, y@ sowie @@srcdimend x y@ gewählt werden (dabei muss @@usesrcdim 1@ gesetzt sein).
@@ -43,11 +43,11 @@ Die Bewegung auf der _z_-Achse (zwischen Ursprung und Kamera) spiegelt direkt de
 
 Die Skizze stellt links die Kameraposition dar (Scheitelpunkt des Winkels), rechts die Videoplane auf ihrer Ursprungsposition (@z = 0@) und in der Mitte eine ausgelenkte Videoplane (@z = d@). Bei der augelenkten Ebene liegt der Streckenabschnitt _*f*_ im sichtbaren Bereich des Kamerawinkels; abgezogen von der Bildhöhe _*h*_ ergibt _*g*_ den Betrag, um den die Ebene potentiell nach oben oder unten bzw. nach links oder rechts bewegt werden kann.
 
-!/docs/img/Bewegung_Videoplane.png!
+!{{site.baseurl}}/docs/img/Bewegung_Videoplane.png!
 
 Die maximalen Auslenkungen berechnen sich nach folgender Formel (Strahlensatz):
 
-!/docs/img/formel_auslenkung.png!
+!{{site.baseurl}}/docs/img/formel_auslenkung.png!
 
 Dies muss jeweils unter Berücksichtigung der _x_- und _y_-Skalierung (als _h_-Werte) berechnet werden.
 

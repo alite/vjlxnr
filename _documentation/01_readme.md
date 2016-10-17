@@ -9,7 +9,7 @@ description: Description of the video fx device and first steps
 
 … (one more) simple VJing tool made with Max/Jitter/Max4Live …
 
-<img src="/docs/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
+<img src="{{site.baseurl}}/docs/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
 
 ## What it does …
 
@@ -85,7 +85,7 @@ After dropping the device onto a track …
 
 Controls of the vjlxnr user interface:
 
-<img src="/docs/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
+<img src="{{site.baseurl}}/docs/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
 
 ## Detailed description of GUI elements
 
@@ -120,7 +120,7 @@ Controls of the vjlxnr user interface:
 
 All parameters - except 13, 15, 16, 22, 26 and 27 - can be used by automation and are saved within the Live Set in Ableton Live.
 
-For release notes refer to [Changelog.md](/docs/changelog/).
+For release notes refer to [Changelog.md](https://github.com/AliTe/vjlxnr/blob/master/Changelog.md).
 
 ## Caveats / known issues
 
