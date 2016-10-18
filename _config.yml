@@ -39,13 +39,16 @@ exclude:
   - Gemfile.lock
 
 collections:
-    documentation:
+    docs:
         output: true
         permalink: /docs/:path/
+    posts:
+        output: true
+        permalink: /blog/:categories/:slug
 
 defaults:
     - scope:
         path: ""
-        type: documentation
+        type: docs
       values:
           layout: page

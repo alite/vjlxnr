@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to VJlxnr"
 date:   2016-10-18 01:10:00 +0200
-categories: update
+categories: website
 ---
 # Welcome to VJlxnr
 
