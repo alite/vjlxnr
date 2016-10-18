@@ -9,7 +9,7 @@ permalink: /docs/
 … here you will find a loose collection of things documenting various aspects 
 of VJlxnr …
 
-{% for doc in site.documentation %}
+{% for doc in site.docs %}
 <h2>
 <a href="{{doc.url | prepend: site.github.url }}">
     {{doc.title}}
