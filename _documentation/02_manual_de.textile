@@ -21,7 +21,7 @@ Der interne Puffer des Devices kann bis zu 32 Bildern fassen (momentan werden nu
 
 h2. Wie funktioniert es?
 
-!{{site.baseurl}}/docs/img/vjlxnr-gui.png!
+!{{site.github.url}}/docs/img/vjlxnr-gui.png!
 
 h3. Wie benutzt man es?
 

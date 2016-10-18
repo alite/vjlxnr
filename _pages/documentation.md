@@ -11,7 +11,7 @@ of VJlxnr …
 
 {% for doc in site.documentation %}
 <h2>
-<a href="{{doc.url | prepend: site.baseurl }}">
+<a href="{{doc.url | prepend: site.github.url }}">
     {{doc.title}}
 </a>
 </h2>

@@ -9,7 +9,7 @@ description: Description of the video fx device and first steps
 
 … (one more) simple VJing tool made with Max/Jitter/Max4Live …
 
-<img src="{{site.baseurl}}/docs/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
+<img src="{{site.github.url}}/docs/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
 
 ## What it does …
 
@@ -85,7 +85,7 @@ After dropping the device onto a track …
 
 Controls of the vjlxnr user interface:
 
-<img src="{{site.baseurl}}/docs/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
+<img src="{{site.github.url}}/docs/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
 
 ## Detailed description of GUI elements
 
