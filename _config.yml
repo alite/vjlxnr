@@ -21,7 +21,7 @@ description: > # this means to ignore newlines until "baseurl:"
     It is mainly focussed on beeing programmable/automatable so musicians
     and DJs can integrate hands-off-video-fx in their performance.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://vj.lxnr.de" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://vj.lxnr.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 4l3xnr
 github_username:  AliTe
 
