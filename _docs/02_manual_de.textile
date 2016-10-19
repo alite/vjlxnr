@@ -1,3 +1,10 @@
+---
+title: Benutzerhandbuch (Manual de)
+layout: page
+permalink: /docs/manual_de/
+description: Benutzerhandbuch in deutsch (Manual in German)
+---
+
 h1. VJlxnr
 
 … (noch ein) simples VJing Tool - ein Max4Live Video-Device …
@@ -14,7 +21,7 @@ Der interne Puffer des Devices kann bis zu 32 Bildern fassen (momentan werden nu
 
 h2. Wie funktioniert es?
 
-!doc/img/vjlxnr-gui.png!
+!{{site.github.url}}/docs/img/vjlxnr-gui.png!
 
 h3. Wie benutzt man es?
 
@@ -65,4 +72,4 @@ Das Max4Live Effekt-Gerät ist verfügbar auf "GitHub":https://github.com/AliTe/
 
 Es ist unter "MIT-Lizenz veröffentlicht":http://opensource.org/licenses/MIT
 
-Weitere Informationen zur aktuellen Version sind in der Datei "Changelog.md":Changelog.md zu finden
+Weitere Informationen zur aktuellen Version sind in der Datei "Changelog.md":https://github.com/AliTe/vjlxnr/blob/master/Changelog.md zu finden

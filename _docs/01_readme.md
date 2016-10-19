@@ -1,8 +1,15 @@
+---
+layout: page
+title: Introduction
+permalink: /docs/intro/
+description: Description of the video fx device and first steps
+---
+
 # VJlxnr
 
 … (one more) simple VJing tool made with Max/Jitter/Max4Live …
 
-<img src="_docs/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
+<img src="{{site.github.url}}/docs/img/vjlxnr.png" width="640px" alt="vjlxnr GUI" />
 
 ## What it does …
 
@@ -12,7 +19,7 @@ The design of this VJing tool is focussed on being mostly programmable/automatab
 
 ## What it contains …
 
-The project contains a Max4Live audio device for use in Ableton Live and a folder containing a set of sample images for free use. (See [License](LICENSE.txt))
+The project contains a Max4Live audio device for use in Ableton Live and a folder containing a set of sample images for free use. (See [License](https://github.com/AliTe/vjlxnr/blob/master/LICENSE.txt))
 
 ## How it works …
 
@@ -78,7 +85,7 @@ After dropping the device onto a track …
 
 Controls of the vjlxnr user interface:
 
-<img src="_docs/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
+<img src="{{site.github.url}}/docs/img/vjlxnr-gui.png" width="640px" alt="vjlxnr GUI" />
 
 ## Detailed description of GUI elements
 
@@ -113,7 +120,7 @@ Controls of the vjlxnr user interface:
 
 All parameters - except 13, 15, 16, 22, 26 and 27 - can be used by automation and are saved within the Live Set in Ableton Live.
 
-For release notes refer to [Changelog.md](Changelog.md).
+For release notes refer to [Changelog.md](https://github.com/AliTe/vjlxnr/blob/master/Changelog.md).
 
 ## Caveats / known issues
 

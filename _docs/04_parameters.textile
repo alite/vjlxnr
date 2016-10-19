@@ -1,0 +1,83 @@
+---
+title: Prameter
+layout: page
+permalink: /docs/parameters/
+description: Auflistung diverser Paramter (Parameter listing German)
+---
+
+h1. Parameter Benutzer Interface
+
+_(Eine vorangestellte Zahl gibt den Automapping-Index in Ableton Live an.)_
+
+h3. Image-Sektion
+
+* _01_ *img_enable* - Bildebene einschalten; hat globalen Effekt, deaktiviert das Device.
+* _02_ *img_imgsel* - Auswahlmenu des Bildes der Bildebene; max. 32 Einträge; bei weniger wird wieder von vorne begonnen.
+* _03_ *img_clock* - Einstellung der Synchronisationsrate (synchron zum Transport); Einstellung '0' deaktiviert den periodischen Pegelabgriff (Auslösen nur per Threshold oder manuell möglich.
+* _04_ *img_fade* - Ein- und Ausblenden der Bildebene; hat globale Auswirkung, das komplette resultierende Bild wird gefadet.
+* _05_ *img_sense* - Empfindlichkeit der Reaktion auf den abgegriffenen Audiopegel auf die Bewegung der Bildebene.
+* _06_ *img_smooth* - Zeit, die die Bewegung der Bildebene benötigt, um an den Zielkoordinaten anzukommen; bei einem Wert von '1' entspricht die Dauer der Bewegung genau der Dauer einer Synchronisationsperiode, bei kleineren Werten erfolgt die Bewegung schneller und die Ebene verharrt auf der Zielposition bis zum nächsten Zyklus (abgehackte Bewegung), bei Werten größer als '1' erreicht die Ebene ihre Zielposition nicht vollständig bevor eine Richtungsänderung stattfindet, es entstehen geschmeidigere Bewegungsabläufe.
+* _07_ *img_zoom* - Beeinflussung der Bewegung in Richtung der z-Achse.
+* _08_ *img_thresh* - Schwellwert, ab dem ein Impuls durch den Audiopegel getriggert wird, unabhängig von der Synchronisationsrate.
+* _09_ *img_rfilter* - Farbfilter rot; wirkt global.
+* _10_ *img_gfilter* - Farbfilter grün; wirkt global.
+* _11_ *img_bfilter* - Farbfilter blau; wirkt global.
+* _12_ *img_damp* - Anteil zufälliger Dämpfung der Bewegung in x- bzw. y-Richtung; '0' bedeutet keine Dämpfung. 
+* *img_bang* - Zeigt einen durch Threshold getriggerten Impuls an
+* *img_preview* - Vorschaubild der Bildebene.
+* *img_title* - Titel / Dateiname des Bildes.
+
+h3. Mask-Sektion
+
+* _17_ *msk_enable* - Maskenebene aktivieren.
+* _18_ *msk_imgsel* - Bildauswahl Maskenebene; analog img_imgsel
+* _19_ *msk_clock* - Synchronisationsrate Maskenebene; analog img_clock
+* _20_ *msk_fade* - Ein- und Ausblenden der Maskenebene; analog img_fade
+* _21_ *msk_sense* - Empfindlichkeit Maskenebene; analog img_sense
+* _22_ *msk_smooth* - Bewegungsdauer Maskenebene; analog img_smooth
+* _23_ *msk_zoom* - Beeinflussung z-Achse; analog img_zoom
+* _24_ *msk_thresh* - Schwellwert Maskenebene; analog img_thresh
+* _25_ *msk_sat* - Sättigung der Maskenebene
+* _26_ *msk_damp* - Dämpfung Maskenebene; analog img_damp
+* *msk_bang* - Impuls-Anzeige / -Trigger; analog img_bang
+* *msk_preview* - Vorschau Maskenebene; analog img_preview
+* *msk_title* - Titel / Dateiname Maskenebene
+
+h3. Global-Sektion
+
+* *glb_dropzone* - Dropzone; einen Ordner mit PNG-Dateien hierher ziehen, um Mediendaten in den Puffer zu laden; max. 32 Dateien
+* *glb_res* - Auflösung des Videofensters
+
+h2. Parameter der Jitter Objekte
+
+h3. @[jit.gl.render]@
+
+* @@erase_color 0. 0. 0. 1.@ - schwarz zum Löschen des Bildes
+
+h3. @[jit.window]@
+
+* @@depthbuffer 1@ - ?
+* @@doublebuffer 1@ - ?
+* @@interp 1@ - Pixel interpolieren
+* @@fsmenubar 0@ - kein Menubalken im Vollbildmodus
+
+h3. @[jit.gl.videoplane]@ - _BG-Ebene_
+
+* @@transform_reset 0@ - perspektivisch(?)
+* @@layer 1@ - Ebene 1
+* @@blend_enable 1@ - Überblenden ermöglichen
+* @@depth_enable 0@ - (?)z-Achse nicht beachten(?)
+* @@blend multiply@ - Überblenden per Multiplikation
+
+h3. @[jit.gl.videoplane]@ - _FG-Ebene_
+
+* @@transform_reset 0@ - perspektivisch(?)
+* @@layer 2@ - Ebene 2
+* @@blend_enable 1@ - Überblenden ermöglichen
+* @@depth_enable 0@ - (?)z-Achse nicht beachten(?)
+* @@blend multiply@ - Überblenden per Multiplikation
+* @@enable 0@ - per default abgeschaltet
+
+h3. @[jit.gl.pix]@ - _FG-Fading_
+
+* @@depth_enable 0@ - ?

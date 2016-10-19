@@ -1,9 +1,13 @@
-
-{{>toc}}
+---
+title: Technische Details (Tech. Specs. de)
+layout: page
+permalink: /docs/tech_specs_de/
+description: Technische Beschreibung deutsch (Tech. Specs. German)
+---
 
 h1. Technische Dokumentation
 
-_(Sämtliche verfügbaren Parameter werden auf einer [[Parameter|separaten Seite]] aufgeführt.)_
+_(Sämtliche verfügbaren Parameter werden auf einer "separaten Seite":{{site.github.url}}/docs/parameters/ aufgeführt.)_
 
 h2. Funktionsweise
 
@@ -17,7 +21,7 @@ Die Bildauflösung kann (zuvor) eingestellt werden, wird die Bildauflösung geä
 
 Entsprechen die eingelesenen Bilddateien nicht dem eingestellten Seitenverhältnis, werden sie entsprechend skaliert und beschnitten, indem im Bezug auf die jeweilige Bildmitte der obere und untere bzw. der linke und rechte Bildrand abgeschnitten wird, gemäß folgender Berechnung:
 
-!vjlxnr_img_scale_cut_formula.png!
+!{{site.github.url}}/docs/img/vjlxnr_img_scale_cut_formula.png!
 
 Die Skalierung sollte mittels @[jit.matrix]@ über das Attribut @@srcdim@ geschehen, wobei @@interp 1@ gesetzt sein sollte.
 Die bei Beschnitt zu wählende Teil-Matrix sollte die Bildmitte beinhalten und kann über die Attribute @@srcdimstart x, y@ sowie @@srcdimend x y@ gewählt werden (dabei muss @@usesrcdim 1@ gesetzt sein).
@@ -39,11 +43,11 @@ Die Bewegung auf der _z_-Achse (zwischen Ursprung und Kamera) spiegelt direkt de
 
 Die Skizze stellt links die Kameraposition dar (Scheitelpunkt des Winkels), rechts die Videoplane auf ihrer Ursprungsposition (@z = 0@) und in der Mitte eine ausgelenkte Videoplane (@z = d@). Bei der augelenkten Ebene liegt der Streckenabschnitt _*f*_ im sichtbaren Bereich des Kamerawinkels; abgezogen von der Bildhöhe _*h*_ ergibt _*g*_ den Betrag, um den die Ebene potentiell nach oben oder unten bzw. nach links oder rechts bewegt werden kann.
 
-{{thumbnail(Bewegung_Videoplane.png, size=800, title="Bewegung der Bildebene (Strahlensatz)")}}
+!{{site.github.url}}/docs/img/Bewegung_Videoplane.png!
 
 Die maximalen Auslenkungen berechnen sich nach folgender Formel (Strahlensatz):
 
-!formel_auslenkung.png!
+!{{site.github.url}}/docs/img/formel_auslenkung.png!
 
 Dies muss jeweils unter Berücksichtigung der _x_- und _y_-Skalierung (als _h_-Werte) berechnet werden.
 
@@ -61,7 +65,7 @@ Koordinaten _<span class="z y, x,"></span>_. Durch Erhalten eines neuen
 * _e_, _z_ Eingestellte _sense_ und _zoom_-Parameter
 
 Zur Durchführung der Bewegung einer Ebene wird ein @[line]@ Objekt benutzt, das im gewünschten Zeitraum (_t_) in der gewünschten Granularität (_∆t_) die entsprechnden Werte für die _z_-Achse (_z'_) ausgibt. Die neuen _x'_- und _y'_-Werte lassen sich aus _z'_ ermitteln:
-@_∆z_ = z' - z@
+@∆z = z' - z@
 
 
 h2. Überblenden der Bildebenen
