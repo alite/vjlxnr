@@ -9,6 +9,12 @@ _(Versions tagged 'vX.Y.Z+freeze' are not mentioned here, they relate to the res
 * When using Ableton Push switching between note- and session-mode causes a short lag of video movement.
 * Some PNG files happen to show not correctly in preview window and won't render in [jit.window] - this seems possibly to happen due to color profile issues - maybe ...
 
+## Release v1.0.1
+
+Web Site Launch
+
+* Launched web site on GitHub Pages (on separate branch 'gh-pages'
+* Renamed 'doc' folder to '\_docs' for easier syncing with gh-pages
 
 ## Release v1.0.0
 
